@@ -1,0 +1,35 @@
+# Sandbox publisher candidate; not part of the official CI starter release.
+name: Publish skill reports
+'on':
+  workflow_run:
+    workflows:
+    - Skill checks
+    types:
+    - completed
+  workflow_dispatch:
+    inputs:
+      run-id:
+        description: Completed Skill checks run
+        required: true
+        type: string
+      run-attempt:
+        description: Completed run attempt
+        required: true
+        type: string
+permissions:
+  contents: write
+  actions: read
+  pages: write
+  id-token: write
+  pull-requests: write
+jobs:
+  reports:
+    uses: NVIDIA/SkillEvaluator/.github/workflows/publish-skill-reports.yml@1f3c98cf1b178d5446e31cc187c97a6a697d599a
+    with:
+      run-id: ${{ format('{0}', github.event.workflow_run.id || inputs.run-id) }}
+      run-attempt: ${{ format('{0}', github.event.workflow_run.run_attempt || inputs.run-attempt) }}
+      report-base-url: https://chrisknvidia.github.io/skillevaluator-cli-playground/
+      trusted-evaluator-shas: e4cda13a85f34fa7a112b3529feaf24cfe587caf
+      trusted-caller-blobs: bc6a127ea48959e5ed65025a90d9cccd0e1d2e18
+      tools-ref: 1f3c98cf1b178d5446e31cc187c97a6a697d599a
+      tools-repository: NVIDIA/SkillEvaluator
