@@ -8,7 +8,8 @@ This document contains advanced PDF processing features, detailed examples, and 
 pypdfium2 is a Python binding for PDFium (Chromium's PDF library). It's excellent for fast PDF rendering, image generation, and serves as a PyMuPDF replacement.
 
 ### Render PDF to Images
-```python
+
+``python
 import pypdfium2 as pdfium
 from PIL import Image
 
