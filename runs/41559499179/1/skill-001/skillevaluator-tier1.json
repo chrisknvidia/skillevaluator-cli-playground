@@ -1,0 +1,1764 @@
+{
+  "overall_passed": false,
+  "overall_status": "failed",
+  "incomplete_scans": [
+    "skillspector"
+  ],
+  "total_validators": 12,
+  "total_skipped": 0,
+  "total_advisory_skipped": 0,
+  "total_errors": 3,
+  "total_warnings": 40,
+  "severity_counts": {
+    "critical": 1,
+    "high": 1,
+    "medium": 11,
+    "low": 27
+  },
+  "skills": [
+    {
+      "name": "pdf",
+      "passed": false,
+      "issue_count": 40
+    }
+  ],
+  "contributors": [
+    {
+      "author": "Unknown",
+      "items": [
+        {
+          "name": "pdf",
+          "passed": false,
+          "issue_count": 40
+        }
+      ],
+      "total_items": 1,
+      "passed_count": 0,
+      "failed_count": 1,
+      "total_issues": 40
+    }
+  ],
+  "results": [
+    {
+      "validator": "Schema & Repository Governance",
+      "description": "Validate SKILL.md frontmatter and repository structure",
+      "passed": false,
+      "status": "failed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 8,
+        "errors": 1,
+        "warnings": 6,
+        "critical_count": 0,
+        "high_count": 1,
+        "medium_count": 2,
+        "low_count": 3
+      },
+      "findings": [
+        {
+          "category": "SCHEMA",
+          "severity": "medium",
+          "check_name": "body_recommended_section",
+          "message": "Missing recommended section: '## Instructions'",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider adding a '## Instructions' or '## Usage' section. Per agentskills.io the body format is unrestricted, so this is a convention nudge \u2014 it also gives the quality scorer a stable anchor for instruction-quality heuristics.",
+          "metadata": {
+            "missing_section": "## Instructions"
+          }
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "medium",
+          "check_name": "body_recommended_section",
+          "message": "Missing recommended section: '## Examples'",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider adding a '## Examples' section. If examples are already inline under instructions, this can be skipped.",
+          "metadata": {
+            "missing_section": "## Examples"
+          }
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "low",
+          "check_name": "unexpected_file",
+          "message": "Unexpected 'reference.md' in skill root",
+          "file_path": "/workspace/skills/pdf/reference.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider moving to one of: agents/, assets/, config/, evals/, references/, scripts/, tests/, tools/. To allow additional directories, set $SKILLEVALUATOR_SCHEMA_ALLOWED_DIRS.",
+          "metadata": null
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "low",
+          "check_name": "unexpected_file",
+          "message": "Unexpected 'forms.md' in skill root",
+          "file_path": "/workspace/skills/pdf/forms.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider moving to one of: agents/, assets/, config/, evals/, references/, scripts/, tests/, tools/. To allow additional directories, set $SKILLEVALUATOR_SCHEMA_ALLOWED_DIRS.",
+          "metadata": null
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "low",
+          "check_name": "unexpected_file",
+          "message": "Unexpected 'LICENSE.txt' in skill root",
+          "file_path": "/workspace/skills/pdf/LICENSE.txt",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider moving to one of: agents/, assets/, config/, evals/, references/, scripts/, tests/, tools/. To allow additional directories, set $SKILLEVALUATOR_SCHEMA_ALLOWED_DIRS.",
+          "metadata": null
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "high",
+          "check_name": "author_missing",
+          "message": "Author not specified in metadata",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'metadata.author' field with format 'Name <email@example.com>'",
+          "metadata": {
+            "profile": "external"
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "manifest_exists",
+          "message": "Found skill manifest: SKILL.md",
+          "metadata": {
+            "file_path": "/workspace/skills/pdf/SKILL.md"
+          }
+        },
+        {
+          "check": "frontmatter_valid",
+          "message": "Valid frontmatter for skill 'pdf'",
+          "metadata": {
+            "description_length": 437
+          }
+        },
+        {
+          "check": "folder_hierarchy",
+          "message": "Valid general skill structure: skills/pdf/",
+          "metadata": null
+        },
+        {
+          "check": "naming_convention",
+          "message": "Folder name 'pdf' follows kebab-case convention",
+          "metadata": {
+            "name_length": 3
+          }
+        },
+        {
+          "check": "line_count",
+          "message": "SKILL.md within line limit (314/500)",
+          "metadata": {
+            "line_count": 314,
+            "limit": 500
+          }
+        },
+        {
+          "check": "body_heading",
+          "message": "Body contains a top-level heading",
+          "metadata": null
+        },
+        {
+          "check": "optional_files",
+          "message": "Found optional supporting files: scripts",
+          "metadata": {
+            "files_found": [
+              "scripts"
+            ]
+          }
+        },
+        {
+          "check": "name_consistency",
+          "message": "Directory name matches frontmatter: 'pdf'",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [
+          "[SCHEMA-HIGH] Author not specified in metadata in /workspace/skills/pdf/SKILL.md"
+        ],
+        "warnings": [
+          "[SCHEMA-MEDIUM] Missing recommended section: '## Instructions' in /workspace/skills/pdf/SKILL.md",
+          "[SCHEMA-MEDIUM] Missing recommended section: '## Examples' in /workspace/skills/pdf/SKILL.md",
+          "[SCHEMA-LOW] Unexpected 'reference.md' in skill root in /workspace/skills/pdf/reference.md",
+          "[SCHEMA-LOW] Unexpected 'forms.md' in skill root in /workspace/skills/pdf/forms.md",
+          "[SCHEMA-LOW] Unexpected 'LICENSE.txt' in skill root in /workspace/skills/pdf/LICENSE.txt",
+          "Workflow scope: llm skipped. LLM checks disabled by --no-llm."
+        ],
+        "messages": [
+          "[OK] manifest_exists: Found skill manifest: SKILL.md",
+          "[OK] frontmatter_valid: Valid frontmatter for skill 'pdf'",
+          "[OK] folder_hierarchy: Valid general skill structure: skills/pdf/",
+          "[OK] naming_convention: Folder name 'pdf' follows kebab-case convention",
+          "[OK] line_count: SKILL.md within line limit (314/500)",
+          "[OK] body_heading: Body contains a top-level heading",
+          "[OK] optional_files: Found optional supporting files: scripts",
+          "[OK] name_consistency: Directory name matches frontmatter: 'pdf'"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "schema"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Semantic Version Validation",
+      "description": "Validate optional metadata.version labels and require strict bumps",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "version_optional",
+          "message": "No semantic version label present; resource will use commit-hash history",
+          "metadata": {
+            "previous_version": null
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] version_optional: No semantic version label present; resource will use commit-hash history"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "version"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Security Scan",
+      "description": "Detect security vulnerabilities and PII/secrets",
+      "passed": false,
+      "status": "incomplete",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "scanners": {
+        "skillspector": "2.13.3"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 1,
+        "warnings": 2,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 2,
+        "low_count": 0
+      },
+      "findings": [
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unknown (LP3)",
+          "message": "MCP Least Privilege: Without declared permissions the skill's intent is opaque and cannot be validated.",
+          "file_path": "SKILL.md",
+          "line_number": 1,
+          "line_content": null,
+          "suggestion": "Without declared permissions the skill's intent is opaque and cannot be validated. Declare the skill's tool scope: for Claude Code / Agent Skills SKILL.md, list the tools the skill may invoke in the 'allowed-tools' frontmatter field; for MCP server manifests, add a 'permissions' list naming the required capabilities.",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Keyword Baiting Trigger (TR3)",
+          "message": "Trigger Abuse: Keyword Baiting Trigger: description clause 'Use this skill whenever the user wants to do anything with PDF files' is de",
+          "file_path": "SKILL.md",
+          "line_number": 1,
+          "line_content": null,
+          "suggestion": "Keyword Baiting Trigger: description clause 'Use this skill whenever the user wants to do anything with PDF files' is designed to match all or most user inputs Use descriptive triggers that clearly indicate the skill's purpose rather than generic keywords designed to maximize activation.",
+          "metadata": {
+            "skillspector_confidence": 0.8
+          }
+        }
+      ],
+      "success_details": [],
+      "legacy": {
+        "errors": [
+          "skillspector JSON field 'analysis_completeness' reports incomplete analysis (status 'partial'); security scan did not complete"
+        ],
+        "warnings": [
+          "[SECURITY-MEDIUM] MCP Least Privilege: Without declared permissions the skill's intent is opaque and cannot be validated. in SKILL.md:1",
+          "[SECURITY-MEDIUM] Trigger Abuse: Keyword Baiting Trigger: description clause 'Use this skill whenever the user wants to do anything with PDF files' is de in SKILL.md:1"
+        ],
+        "messages": []
+      },
+      "skillspector_version": "2.13.3",
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "security"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "PII Scan",
+      "description": "Detect PII and local identifiers",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 12,
+        "checks_performed": 2,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "pii_scan_start",
+          "message": "Scanning 12 files for PII",
+          "metadata": {
+            "file_count": 12
+          }
+        },
+        {
+          "check": "pii_detection",
+          "message": "No PII detected in 12 files (emails, SSNs, phone numbers, paths)",
+          "metadata": {
+            "files_scanned": 12
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] pii_scan_start: Scanning 12 files for PII",
+          "[OK] pii_detection: No PII detected in 12 files (emails, SSNs, phone numbers, paths)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "pii"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "License Compliance",
+      "description": "Validate license compliance for Skills, Rules, and Workflows",
+      "passed": false,
+      "status": "failed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 1,
+        "warnings": 0,
+        "critical_count": 1,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [
+        {
+          "category": "LICENSE",
+          "severity": "critical",
+          "check_name": "blocked_license",
+          "message": "License 'Proprietary' is not allowed (restrictive/copyleft)",
+          "file_path": "LICENSE.txt",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "This asset uses a restrictive license that is not permitted. Contact the asset owner about re-licensing, or find an alternative.",
+          "metadata": null
+        }
+      ],
+      "success_details": [],
+      "legacy": {
+        "errors": [
+          "[LICENSE-CRITICAL] License 'Proprietary' is not allowed (restrictive/copyleft) in LICENSE.txt"
+        ],
+        "warnings": [],
+        "messages": [
+          "Tier 1: Found license declaration in frontmatter (SKILL.md)",
+          "  License field references file: 'Proprietary. LICENSE.txt has complete terms'"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "license"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Code Risk Analysis",
+      "description": "Static code analysis using Bandit and packaged Semgrep rules",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "scanners": {
+        "bandit": "1.9.4",
+        "semgrep": "1.182.0"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 2,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "bandit",
+          "message": "Bandit: No security issues found",
+          "metadata": null
+        },
+        {
+          "check": "semgrep",
+          "message": "Semgrep: No security issues found",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "Found 8 Python, 0 Shell, 0 JavaScript/TypeScript files",
+          "[OK] bandit: Bandit: No security issues found",
+          "[OK] semgrep: Semgrep: No security issues found"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Secrets Detection",
+      "description": "Detect hardcoded secrets, API keys, and credentials using Gitleaks",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "scanners": {
+        "gitleaks": "8.30.0"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "gitleaks",
+          "message": "No secrets detected by Gitleaks",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] gitleaks: No secrets detected by Gitleaks"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Code Integrity & Hygiene",
+      "description": "Validate dead links, dependencies, and static Python test-file discovery",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 3,
+        "checks_performed": 4,
+        "errors": 0,
+        "warnings": 1,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "dead_links_scan",
+          "message": "Checking 3 markdown files for dead links",
+          "metadata": {
+            "file_count": 3
+          }
+        },
+        {
+          "check": "dead_links",
+          "message": "All relative links valid in 3 markdown file(s)",
+          "metadata": {
+            "files_checked": 3
+          }
+        },
+        {
+          "check": "dependencies",
+          "message": "No dependency files found (requirements.txt, pyproject.toml)",
+          "metadata": null
+        },
+        {
+          "check": "test_discovery",
+          "message": "No standard Python test-file candidates found; target tests were not executed and coverage was not measured. Consider adding tests.",
+          "metadata": {
+            "test_count": 0,
+            "execution_performed": false,
+            "coverage_measured": false,
+            "patterns": [
+              "test_*.py",
+              "*_test.py"
+            ]
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "No standard Python test-file candidates found; consider adding tests"
+        ],
+        "messages": [
+          "[OK] dead_links_scan: Checking 3 markdown files for dead links",
+          "[OK] dead_links: All relative links valid in 3 markdown file(s)",
+          "[OK] dependencies: No dependency files found (requirements.txt, pyproject.toml)",
+          "[OK] test_discovery: No standard Python test-file candidates found; target tests were not executed and coverage was not measured. Consider adding tests."
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Dependency Vulnerability Audit",
+      "description": "Scan dependencies for CVE vulnerabilities using pip-audit and Safety",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "dependency_file_discovery",
+          "message": "No dependency files found - vulnerability audit is not applicable",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] dependency_file_discovery: No dependency files found - vulnerability audit is not applicable"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "dependency"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Unicode Smuggling Detection",
+      "description": "Detect invisible Unicode characters and ASCII smuggling",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 12,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "unicode_scan",
+          "message": "No invisible Unicode characters detected in 12 file(s)",
+          "metadata": {
+            "files_scanned": 12
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] unicode_scan: No invisible Unicode characters detected in 12 file(s)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "unicode"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "QUALITY",
+      "description": "Skill quality scoring across Correctness (35%), Discoverability (25%), Reliability (25%), and Efficiency (15%)",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 14,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 6,
+        "low_count": 8
+      },
+      "findings": [
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "No documented scripts in table format",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 10
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "Instructions don't mention 'run_script'",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add explicit run_script() call examples",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 10
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'version'",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "Description very long (437 chars, recommend 50-150)",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Keep descriptions concise for progressive disclosure",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "Broad description without negative triggers may cause over-triggering",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add boundary phrases like 'Do NOT use for...'",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "No '## Purpose' section",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add purpose section to clarify use cases",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_discoverability",
+          "message": "Skill name very short: 'pdf'",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Use descriptive names like 'crypto-utils' not 'crypto'",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 10
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No mention of error handling or validation",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Document expected errors and how to handle them",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 10
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "Scripts may lack error handling: check_fillable_fields.py, convert_pdf_to_images.py, create_validation_image.py",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Scripts should handle errors explicitly",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No prerequisites/requirements documented",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Document dependencies, API keys, or setup needed",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No limitations documented",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Limitations' section with known issues/constraints",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No troubleshooting section documented",
+          "file_path": "/workspace/skills/pdf/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "quality_score",
+          "message": "Score: 74.0/100 (Grade: C)",
+          "metadata": {
+            "overall_score": 74.0,
+            "grade": "C",
+            "skill_type": "script-based"
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[QUALITY-MEDIUM] No documented scripts in table format in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-MEDIUM] Instructions don't mention 'run_script' in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'version' in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'metadata.author' in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'metadata.tags' in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-LOW] Description very long (437 chars, recommend 50-150) in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-LOW] Broad description without negative triggers may cause over-triggering in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-LOW] No '## Purpose' section in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-MEDIUM] Skill name very short: 'pdf' in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-LOW] No mention of error handling or validation in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-LOW] Scripts may lack error handling: check_fillable_fields.py, convert_pdf_to_images.py, create_validation_image.py in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-LOW] No prerequisites/requirements documented in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-LOW] No limitations documented in /workspace/skills/pdf/SKILL.md",
+          "[QUALITY-LOW] No troubleshooting section documented in /workspace/skills/pdf/SKILL.md"
+        ],
+        "messages": [
+          "[OK] quality_score: Score: 74.0/100 (Grade: C)"
+        ]
+      },
+      "quality": {
+        "overall_score": 74.0,
+        "grade": "C",
+        "skill_type": "script-based",
+        "skill_name": "pdf",
+        "dimensions": {
+          "correctness": {
+            "score": 65.0,
+            "weight": 0.35,
+            "issues_count": 5,
+            "issues": [
+              {
+                "severity": "warning",
+                "message": "No documented scripts in table format",
+                "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+                "deduction": 10
+              },
+              {
+                "severity": "warning",
+                "message": "Instructions don't mention 'run_script'",
+                "suggestion": "Add explicit run_script() call examples",
+                "deduction": 10
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'version'",
+                "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+                "deduction": 5
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+                "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+                "deduction": 5
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+                "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+                "deduction": 5
+              }
+            ]
+          },
+          "discoverability": {
+            "score": 75.0,
+            "weight": 0.25,
+            "issues_count": 4,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "Description very long (437 chars, recommend 50-150)",
+                "suggestion": "Keep descriptions concise for progressive disclosure",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "Broad description without negative triggers may cause over-triggering",
+                "suggestion": "Add boundary phrases like 'Do NOT use for...'",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No '## Purpose' section",
+                "suggestion": "Add purpose section to clarify use cases",
+                "deduction": 5
+              },
+              {
+                "severity": "warning",
+                "message": "Skill name very short: 'pdf'",
+                "suggestion": "Use descriptive names like 'crypto-utils' not 'crypto'",
+                "deduction": 10
+              }
+            ]
+          },
+          "reliability": {
+            "score": 70.0,
+            "weight": 0.25,
+            "issues_count": 5,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "No mention of error handling or validation",
+                "suggestion": "Document expected errors and how to handle them",
+                "deduction": 10
+              },
+              {
+                "severity": "info",
+                "message": "Scripts may lack error handling: check_fillable_fields.py, convert_pdf_to_images.py, create_validation_image.py",
+                "suggestion": "Scripts should handle errors explicitly",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No prerequisites/requirements documented",
+                "suggestion": "Document dependencies, API keys, or setup needed",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No limitations documented",
+                "suggestion": "Add '## Limitations' section with known issues/constraints",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No troubleshooting section documented",
+                "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+                "deduction": 5
+              }
+            ]
+          },
+          "efficiency": {
+            "score": 100.0,
+            "weight": 0.15,
+            "issues_count": 0,
+            "issues": []
+          }
+        },
+        "metrics": {
+          "total_tokens": 2008,
+          "recommended_max_tokens": 5000,
+          "frontmatter_tokens": 128,
+          "instructions_tokens": 1878,
+          "script_count": 8,
+          "has_examples": true,
+          "has_error_handling": false,
+          "has_frontmatter": true,
+          "has_instructions": false,
+          "has_scripts": true,
+          "has_lib_module": false
+        }
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "quality"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "SCRIPT_LINT",
+      "description": "AST-based code quality checks for skill scripts",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 17,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 1,
+        "low_count": 16
+      },
+      "findings": [
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "check_bounding_boxes.py contains magic numbers",
+          "file_path": "/workspace/skills/pdf/scripts/check_bounding_boxes.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "check_bounding_boxes.py missing shebang line",
+          "file_path": "/workspace/skills/pdf/scripts/check_bounding_boxes.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "medium",
+          "check_name": "flat_script",
+          "message": "check_fillable_fields.py has no function definitions (flat script)",
+          "file_path": "/workspace/skills/pdf/scripts/check_fillable_fields.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Wrap logic in functions for maintainability and testability",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "check_fillable_fields.py missing shebang line",
+          "file_path": "/workspace/skills/pdf/scripts/check_fillable_fields.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "no_input_validation",
+          "message": "check_fillable_fields.py may lack input validation",
+          "file_path": "/workspace/skills/pdf/scripts/check_fillable_fields.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add argument checks and raise descriptive errors",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "convert_pdf_to_images.py contains magic numbers",
+          "file_path": "/workspace/skills/pdf/scripts/convert_pdf_to_images.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "convert_pdf_to_images.py missing shebang line",
+          "file_path": "/workspace/skills/pdf/scripts/convert_pdf_to_images.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "create_validation_image.py contains magic numbers",
+          "file_path": "/workspace/skills/pdf/scripts/create_validation_image.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "create_validation_image.py missing shebang line",
+          "file_path": "/workspace/skills/pdf/scripts/create_validation_image.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "extract_form_field_info.py contains magic numbers",
+          "file_path": "/workspace/skills/pdf/scripts/extract_form_field_info.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "extract_form_field_info.py missing shebang line",
+          "file_path": "/workspace/skills/pdf/scripts/extract_form_field_info.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "extract_form_structure.py contains magic numbers",
+          "file_path": "/workspace/skills/pdf/scripts/extract_form_structure.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "extract_form_structure.py missing shebang line",
+          "file_path": "/workspace/skills/pdf/scripts/extract_form_structure.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "fill_fillable_fields.py contains magic numbers",
+          "file_path": "/workspace/skills/pdf/scripts/fill_fillable_fields.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "fill_fillable_fields.py missing shebang line",
+          "file_path": "/workspace/skills/pdf/scripts/fill_fillable_fields.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "fill_pdf_form_with_annotations.py contains magic numbers",
+          "file_path": "/workspace/skills/pdf/scripts/fill_pdf_form_with_annotations.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "fill_pdf_form_with_annotations.py missing shebang line",
+          "file_path": "/workspace/skills/pdf/scripts/fill_pdf_form_with_annotations.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        }
+      ],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[SCRIPT_LINT-LOW] check_bounding_boxes.py contains magic numbers in /workspace/skills/pdf/scripts/check_bounding_boxes.py",
+          "[SCRIPT_LINT-LOW] check_bounding_boxes.py missing shebang line in /workspace/skills/pdf/scripts/check_bounding_boxes.py",
+          "[SCRIPT_LINT-MEDIUM] check_fillable_fields.py has no function definitions (flat script) in /workspace/skills/pdf/scripts/check_fillable_fields.py",
+          "[SCRIPT_LINT-LOW] check_fillable_fields.py missing shebang line in /workspace/skills/pdf/scripts/check_fillable_fields.py",
+          "[SCRIPT_LINT-LOW] check_fillable_fields.py may lack input validation in /workspace/skills/pdf/scripts/check_fillable_fields.py",
+          "[SCRIPT_LINT-LOW] convert_pdf_to_images.py contains magic numbers in /workspace/skills/pdf/scripts/convert_pdf_to_images.py",
+          "[SCRIPT_LINT-LOW] convert_pdf_to_images.py missing shebang line in /workspace/skills/pdf/scripts/convert_pdf_to_images.py",
+          "[SCRIPT_LINT-LOW] create_validation_image.py contains magic numbers in /workspace/skills/pdf/scripts/create_validation_image.py",
+          "[SCRIPT_LINT-LOW] create_validation_image.py missing shebang line in /workspace/skills/pdf/scripts/create_validation_image.py",
+          "[SCRIPT_LINT-LOW] extract_form_field_info.py contains magic numbers in /workspace/skills/pdf/scripts/extract_form_field_info.py",
+          "[SCRIPT_LINT-LOW] extract_form_field_info.py missing shebang line in /workspace/skills/pdf/scripts/extract_form_field_info.py",
+          "[SCRIPT_LINT-LOW] extract_form_structure.py contains magic numbers in /workspace/skills/pdf/scripts/extract_form_structure.py",
+          "[SCRIPT_LINT-LOW] extract_form_structure.py missing shebang line in /workspace/skills/pdf/scripts/extract_form_structure.py",
+          "[SCRIPT_LINT-LOW] fill_fillable_fields.py contains magic numbers in /workspace/skills/pdf/scripts/fill_fillable_fields.py",
+          "[SCRIPT_LINT-LOW] fill_fillable_fields.py missing shebang line in /workspace/skills/pdf/scripts/fill_fillable_fields.py",
+          "[SCRIPT_LINT-LOW] fill_pdf_form_with_annotations.py contains magic numbers in /workspace/skills/pdf/scripts/fill_pdf_form_with_annotations.py",
+          "[SCRIPT_LINT-LOW] fill_pdf_form_with_annotations.py missing shebang line in /workspace/skills/pdf/scripts/fill_pdf_form_with_annotations.py"
+        ],
+        "messages": []
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "pdf",
+        "skill_digest": "sha256:d5c519b7a335d5b2d9654bdbeb5a4456bb9a92831311fcb7e12696aebdfd8c29",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "lint"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    }
+  ],
+  "benchmark_policy": {
+    "tier2_required": true,
+    "tier3_required": true
+  },
+  "publication_status": "incomplete",
+  "publication": {
+    "status": "incomplete",
+    "eligible": false,
+    "reasons": [
+      "One or more validators reported incomplete scanner evidence."
+    ],
+    "tier3": {
+      "status": "not_run",
+      "evidence_complete": false,
+      "execution_status": "not_run",
+      "verdict": "not_run",
+      "reason": "Tier 3 lacks publication-complete execution evidence."
+    }
+  },
+  "policy": {
+    "profile": "external",
+    "audience": "external",
+    "digest": "sha256:1caeb0bf9c2e044705f32fcdbd773fea4d835d895b4e0ab20d1aaa5e28acd660",
+    "author_email_regex": null,
+    "severity_overrides": {
+      "SCHEMA.author_missing": "high",
+      "SCHEMA.author_format": "high",
+      "WORKFLOWS.author_format": "high",
+      "LICENSE.*": "critical"
+    },
+    "source": "/opt/skillevaluator/.venv/lib/python3.12/site-packages/skillevaluator/config/profiles/external.yaml"
+  },
+  "quality_config": {
+    "source": "packaged",
+    "file": null,
+    "digest": "sha256:b70a47b94b92e0e3a82f704930dad392b753df162aa30463ce0567d24ee76e49",
+    "min_score": 70
+  },
+  "evaluated_source": null,
+  "gating": {
+    "tiers": {
+      "1": {
+        "blocking": true,
+        "validators": [
+          "Schema & Repository Governance",
+          "Semantic Version Validation",
+          "Security Scan",
+          "PII Scan",
+          "License Compliance",
+          "Code Risk Analysis",
+          "Secrets Detection",
+          "Code Integrity & Hygiene",
+          "Dependency Vulnerability Audit",
+          "Unicode Smuggling Detection",
+          "QUALITY",
+          "SCRIPT_LINT"
+        ]
+      }
+    }
+  },
+  "workflow": {
+    "tier": 1,
+    "stages": {
+      "validation": {
+        "status": "incomplete"
+      },
+      "llm": {
+        "status": "skipped",
+        "reason": "LLM checks disabled by --no-llm."
+      }
+    }
+  },
+  "quality_summary": [
+    {
+      "overall_score": 74.0,
+      "grade": "C",
+      "skill_type": "script-based",
+      "skill_name": "pdf",
+      "dimensions": {
+        "correctness": {
+          "score": 65.0,
+          "weight": 0.35,
+          "issues_count": 5,
+          "issues": [
+            {
+              "severity": "warning",
+              "message": "No documented scripts in table format",
+              "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+              "deduction": 10
+            },
+            {
+              "severity": "warning",
+              "message": "Instructions don't mention 'run_script'",
+              "suggestion": "Add explicit run_script() call examples",
+              "deduction": 10
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'version'",
+              "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+              "deduction": 5
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+              "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+              "deduction": 5
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+              "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+              "deduction": 5
+            }
+          ]
+        },
+        "discoverability": {
+          "score": 75.0,
+          "weight": 0.25,
+          "issues_count": 4,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "Description very long (437 chars, recommend 50-150)",
+              "suggestion": "Keep descriptions concise for progressive disclosure",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "Broad description without negative triggers may cause over-triggering",
+              "suggestion": "Add boundary phrases like 'Do NOT use for...'",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No '## Purpose' section",
+              "suggestion": "Add purpose section to clarify use cases",
+              "deduction": 5
+            },
+            {
+              "severity": "warning",
+              "message": "Skill name very short: 'pdf'",
+              "suggestion": "Use descriptive names like 'crypto-utils' not 'crypto'",
+              "deduction": 10
+            }
+          ]
+        },
+        "reliability": {
+          "score": 70.0,
+          "weight": 0.25,
+          "issues_count": 5,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "No mention of error handling or validation",
+              "suggestion": "Document expected errors and how to handle them",
+              "deduction": 10
+            },
+            {
+              "severity": "info",
+              "message": "Scripts may lack error handling: check_fillable_fields.py, convert_pdf_to_images.py, create_validation_image.py",
+              "suggestion": "Scripts should handle errors explicitly",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No prerequisites/requirements documented",
+              "suggestion": "Document dependencies, API keys, or setup needed",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No limitations documented",
+              "suggestion": "Add '## Limitations' section with known issues/constraints",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No troubleshooting section documented",
+              "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+              "deduction": 5
+            }
+          ]
+        },
+        "efficiency": {
+          "score": 100.0,
+          "weight": 0.15,
+          "issues_count": 0,
+          "issues": []
+        }
+      },
+      "metrics": {
+        "total_tokens": 2008,
+        "recommended_max_tokens": 5000,
+        "frontmatter_tokens": 128,
+        "instructions_tokens": 1878,
+        "script_count": 8,
+        "has_examples": true,
+        "has_error_handling": false,
+        "has_frontmatter": true,
+        "has_instructions": false,
+        "has_scripts": true,
+        "has_lib_module": false
+      }
+    }
+  ],
+  "generated_at": "2026-11-03T01:24:58.335556+00:00"
+}
