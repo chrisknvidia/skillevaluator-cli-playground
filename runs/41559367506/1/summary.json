@@ -1,0 +1,443 @@
+{
+  "total": 21,
+  "passed": 2,
+  "failed": 19,
+  "incomplete": 0,
+  "overall_passed": false,
+  "overall_status": "failed",
+  "total_validators": 252,
+  "total_errors": 151,
+  "total_warnings": 594,
+  "severity_counts": {
+    "critical": 4,
+    "high": 129,
+    "medium": 313,
+    "low": 237
+  },
+  "skills": [
+    {
+      "path": "sandbox-skills/evidence-table",
+      "report_dir": "skill-001",
+      "exit_code": 0,
+      "overall_status": "passed",
+      "incomplete_scans": [],
+      "passed": true,
+      "total_validators": 12,
+      "total_errors": 0,
+      "total_warnings": 4,
+      "severity_counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 2,
+        "low": 0
+      }
+    },
+    {
+      "path": "sandbox-skills/glossary-builder",
+      "report_dir": "skill-002",
+      "exit_code": 0,
+      "overall_status": "passed",
+      "incomplete_scans": [],
+      "passed": true,
+      "total_validators": 12,
+      "total_errors": 0,
+      "total_warnings": 4,
+      "severity_counts": {
+        "critical": 0,
+        "high": 0,
+        "medium": 2,
+        "low": 0
+      }
+    },
+    {
+      "path": "skills/academy-guide",
+      "report_dir": "skill-003",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 3,
+      "total_warnings": 13,
+      "severity_counts": {
+        "critical": 0,
+        "high": 1,
+        "medium": 5,
+        "low": 6
+      }
+    },
+    {
+      "path": "skills/algorithmic-art",
+      "report_dir": "skill-004",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 4,
+      "total_warnings": 17,
+      "severity_counts": {
+        "critical": 0,
+        "high": 3,
+        "medium": 5,
+        "low": 10
+      }
+    },
+    {
+      "path": "skills/brand-guidelines",
+      "report_dir": "skill-005",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 1,
+      "total_warnings": 15,
+      "severity_counts": {
+        "critical": 0,
+        "high": 1,
+        "medium": 5,
+        "low": 8
+      }
+    },
+    {
+      "path": "skills/canvas-design",
+      "report_dir": "skill-006",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 3,
+      "total_warnings": 45,
+      "severity_counts": {
+        "critical": 0,
+        "high": 2,
+        "medium": 6,
+        "low": 37
+      }
+    },
+    {
+      "path": "skills/claude-api",
+      "report_dir": "skill-007",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 73,
+      "total_warnings": 108,
+      "severity_counts": {
+        "critical": 0,
+        "high": 71,
+        "medium": 101,
+        "low": 6
+      }
+    },
+    {
+      "path": "skills/discernment-nudge",
+      "report_dir": "skill-008",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 2,
+      "total_warnings": 16,
+      "severity_counts": {
+        "critical": 0,
+        "high": 2,
+        "medium": 7,
+        "low": 7
+      }
+    },
+    {
+      "path": "skills/doc-coauthoring",
+      "report_dir": "skill-009",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 2,
+      "total_warnings": 15,
+      "severity_counts": {
+        "critical": 0,
+        "high": 1,
+        "medium": 5,
+        "low": 7
+      }
+    },
+    {
+      "path": "skills/docx",
+      "report_dir": "skill-010",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 10,
+      "total_warnings": 47,
+      "severity_counts": {
+        "critical": 1,
+        "high": 7,
+        "medium": 31,
+        "low": 15
+      }
+    },
+    {
+      "path": "skills/frontend-design",
+      "report_dir": "skill-011",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 2,
+      "total_warnings": 14,
+      "severity_counts": {
+        "critical": 0,
+        "high": 2,
+        "medium": 5,
+        "low": 7
+      }
+    },
+    {
+      "path": "skills/internal-comms",
+      "report_dir": "skill-012",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 2,
+      "total_warnings": 18,
+      "severity_counts": {
+        "critical": 0,
+        "high": 2,
+        "medium": 6,
+        "low": 10
+      }
+    },
+    {
+      "path": "skills/mcp-builder",
+      "report_dir": "skill-013",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 13,
+      "total_warnings": 36,
+      "severity_counts": {
+        "critical": 0,
+        "high": 11,
+        "medium": 20,
+        "low": 15
+      }
+    },
+    {
+      "path": "skills/pdf",
+      "report_dir": "skill-014",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 3,
+      "total_warnings": 40,
+      "severity_counts": {
+        "critical": 1,
+        "high": 1,
+        "medium": 11,
+        "low": 27
+      }
+    },
+    {
+      "path": "skills/pptx",
+      "report_dir": "skill-015",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 9,
+      "total_warnings": 45,
+      "severity_counts": {
+        "critical": 1,
+        "high": 7,
+        "medium": 28,
+        "low": 15
+      }
+    },
+    {
+      "path": "skills/skill-creator",
+      "report_dir": "skill-016",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 6,
+      "total_warnings": 36,
+      "severity_counts": {
+        "critical": 0,
+        "high": 5,
+        "medium": 16,
+        "low": 18
+      }
+    },
+    {
+      "path": "skills/slack-gif-creator",
+      "report_dir": "skill-017",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector",
+        "pip-audit"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 2,
+      "total_warnings": 25,
+      "severity_counts": {
+        "critical": 0,
+        "high": 1,
+        "medium": 5,
+        "low": 14
+      }
+    },
+    {
+      "path": "skills/theme-factory",
+      "report_dir": "skill-018",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 4,
+      "total_warnings": 16,
+      "severity_counts": {
+        "critical": 0,
+        "high": 3,
+        "medium": 5,
+        "low": 9
+      }
+    },
+    {
+      "path": "skills/web-artifacts-builder",
+      "report_dir": "skill-019",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 2,
+      "total_warnings": 18,
+      "severity_counts": {
+        "critical": 0,
+        "high": 1,
+        "medium": 7,
+        "low": 9
+      }
+    },
+    {
+      "path": "skills/webapp-testing",
+      "report_dir": "skill-020",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 3,
+      "total_warnings": 20,
+      "severity_counts": {
+        "critical": 0,
+        "high": 3,
+        "medium": 10,
+        "low": 8
+      }
+    },
+    {
+      "path": "skills/xlsx",
+      "report_dir": "skill-021",
+      "exit_code": 1,
+      "overall_status": "failed",
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "passed": false,
+      "total_validators": 12,
+      "total_errors": 7,
+      "total_warnings": 42,
+      "severity_counts": {
+        "critical": 1,
+        "high": 5,
+        "medium": 31,
+        "low": 9
+      }
+    }
+  ],
+  "selection": {
+    "mode": "all",
+    "base": null,
+    "head": null,
+    "discovered": 21,
+    "selected": [
+      "sandbox-skills/evidence-table",
+      "sandbox-skills/glossary-builder",
+      "skills/academy-guide",
+      "skills/algorithmic-art",
+      "skills/brand-guidelines",
+      "skills/canvas-design",
+      "skills/claude-api",
+      "skills/discernment-nudge",
+      "skills/doc-coauthoring",
+      "skills/docx",
+      "skills/frontend-design",
+      "skills/internal-comms",
+      "skills/mcp-builder",
+      "skills/pdf",
+      "skills/pptx",
+      "skills/skill-creator",
+      "skills/slack-gif-creator",
+      "skills/theme-factory",
+      "skills/web-artifacts-builder",
+      "skills/webapp-testing",
+      "skills/xlsx"
+    ],
+    "deleted": []
+  },
+  "execution": {
+    "run_url": "https://github.com/chrisknvidia/skillevaluator-cli-playground/actions/runs/41559367506",
+    "commit": "87fd396eb165df31f9a120ac290af7affa50a278",
+    "image": "ghcr.io/nvidia/skillevaluator-tier1@sha256:c75c826f0e52d6c9a8d303ad7eefd606ed86e6940123f42b4eda2457863bcee7",
+    "report_url": "https://chrisknvidia.github.io/skillevaluator-cli-playground/runs/41559367506/1/",
+    "llm_enabled": false,
+    "workflow_sha": "87fd396eb165df31f9a120ac290af7affa50a278"
+  }
+}

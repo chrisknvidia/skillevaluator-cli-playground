@@ -1,0 +1,1455 @@
+{
+  "overall_passed": false,
+  "overall_status": "failed",
+  "incomplete_scans": [
+    "skillspector",
+    "pip-audit"
+  ],
+  "total_validators": 12,
+  "total_skipped": 0,
+  "total_advisory_skipped": 0,
+  "total_errors": 2,
+  "total_warnings": 25,
+  "severity_counts": {
+    "critical": 0,
+    "high": 1,
+    "medium": 5,
+    "low": 14
+  },
+  "skills": [
+    {
+      "name": "slack-gif-creator",
+      "passed": false,
+      "issue_count": 20
+    }
+  ],
+  "contributors": [
+    {
+      "author": "Unknown",
+      "items": [
+        {
+          "name": "slack-gif-creator",
+          "passed": false,
+          "issue_count": 20
+        }
+      ],
+      "total_items": 1,
+      "passed_count": 0,
+      "failed_count": 1,
+      "total_issues": 20
+    }
+  ],
+  "results": [
+    {
+      "validator": "Schema & Repository Governance",
+      "description": "Validate SKILL.md frontmatter and repository structure",
+      "passed": false,
+      "status": "failed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 7,
+        "errors": 1,
+        "warnings": 6,
+        "critical_count": 0,
+        "high_count": 1,
+        "medium_count": 2,
+        "low_count": 3
+      },
+      "findings": [
+        {
+          "category": "SCHEMA",
+          "severity": "medium",
+          "check_name": "body_recommended_section",
+          "message": "Missing recommended section: '## Instructions'",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider adding a '## Instructions' or '## Usage' section. Per agentskills.io the body format is unrestricted, so this is a convention nudge \u2014 it also gives the quality scorer a stable anchor for instruction-quality heuristics.",
+          "metadata": {
+            "missing_section": "## Instructions"
+          }
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "medium",
+          "check_name": "body_recommended_section",
+          "message": "Missing recommended section: '## Examples'",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider adding a '## Examples' section. If examples are already inline under instructions, this can be skipped.",
+          "metadata": {
+            "missing_section": "## Examples"
+          }
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "low",
+          "check_name": "unexpected_file",
+          "message": "Unexpected 'requirements.txt' in skill root",
+          "file_path": "/workspace/skills/slack-gif-creator/requirements.txt",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider moving to one of: agents/, assets/, config/, evals/, references/, scripts/, tests/, tools/. To allow additional directories, set $SKILLEVALUATOR_SCHEMA_ALLOWED_DIRS.",
+          "metadata": null
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "low",
+          "check_name": "unexpected_file",
+          "message": "Unexpected 'core' in skill root",
+          "file_path": "/workspace/skills/slack-gif-creator/core",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider moving to one of: agents/, assets/, config/, evals/, references/, scripts/, tests/, tools/. To allow additional directories, set $SKILLEVALUATOR_SCHEMA_ALLOWED_DIRS.",
+          "metadata": null
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "low",
+          "check_name": "unexpected_file",
+          "message": "Unexpected 'LICENSE.txt' in skill root",
+          "file_path": "/workspace/skills/slack-gif-creator/LICENSE.txt",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider moving to one of: agents/, assets/, config/, evals/, references/, scripts/, tests/, tools/. To allow additional directories, set $SKILLEVALUATOR_SCHEMA_ALLOWED_DIRS.",
+          "metadata": null
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "high",
+          "check_name": "author_missing",
+          "message": "Author not specified in metadata",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'metadata.author' field with format 'Name <email@example.com>'",
+          "metadata": {
+            "profile": "external"
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "manifest_exists",
+          "message": "Found skill manifest: SKILL.md",
+          "metadata": {
+            "file_path": "/workspace/skills/slack-gif-creator/SKILL.md"
+          }
+        },
+        {
+          "check": "frontmatter_valid",
+          "message": "Valid frontmatter for skill 'slack-gif-creator'",
+          "metadata": {
+            "description_length": 227
+          }
+        },
+        {
+          "check": "folder_hierarchy",
+          "message": "Valid general skill structure: skills/slack-gif-creator/",
+          "metadata": null
+        },
+        {
+          "check": "naming_convention",
+          "message": "Folder name 'slack-gif-creator' follows kebab-case convention",
+          "metadata": {
+            "name_length": 17
+          }
+        },
+        {
+          "check": "line_count",
+          "message": "SKILL.md within line limit (254/500)",
+          "metadata": {
+            "line_count": 254,
+            "limit": 500
+          }
+        },
+        {
+          "check": "body_heading",
+          "message": "Body contains a top-level heading",
+          "metadata": null
+        },
+        {
+          "check": "name_consistency",
+          "message": "Directory name matches frontmatter: 'slack-gif-creator'",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [
+          "[SCHEMA-HIGH] Author not specified in metadata in /workspace/skills/slack-gif-creator/SKILL.md"
+        ],
+        "warnings": [
+          "[SCHEMA-MEDIUM] Missing recommended section: '## Instructions' in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[SCHEMA-MEDIUM] Missing recommended section: '## Examples' in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[SCHEMA-LOW] Unexpected 'requirements.txt' in skill root in /workspace/skills/slack-gif-creator/requirements.txt",
+          "[SCHEMA-LOW] Unexpected 'core' in skill root in /workspace/skills/slack-gif-creator/core",
+          "[SCHEMA-LOW] Unexpected 'LICENSE.txt' in skill root in /workspace/skills/slack-gif-creator/LICENSE.txt",
+          "Workflow scope: llm skipped. LLM checks disabled by --no-llm."
+        ],
+        "messages": [
+          "[OK] manifest_exists: Found skill manifest: SKILL.md",
+          "[OK] frontmatter_valid: Valid frontmatter for skill 'slack-gif-creator'",
+          "[OK] folder_hierarchy: Valid general skill structure: skills/slack-gif-creator/",
+          "[OK] naming_convention: Folder name 'slack-gif-creator' follows kebab-case convention",
+          "[OK] line_count: SKILL.md within line limit (254/500)",
+          "[OK] body_heading: Body contains a top-level heading",
+          "[OK] name_consistency: Directory name matches frontmatter: 'slack-gif-creator'"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "schema"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Semantic Version Validation",
+      "description": "Validate optional metadata.version labels and require strict bumps",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "version_optional",
+          "message": "No semantic version label present; resource will use commit-hash history",
+          "metadata": {
+            "previous_version": null
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] version_optional: No semantic version label present; resource will use commit-hash history"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "version"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Security Scan",
+      "description": "Detect security vulnerabilities and PII/secrets",
+      "passed": false,
+      "status": "incomplete",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "scanners": {
+        "skillspector": "2.13.3"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 1,
+        "warnings": 6,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 6
+      },
+      "findings": [
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unpinned Dependencies (SC1)",
+          "message": "Supply Chain: pillow>=10.0.0",
+          "file_path": "requirements.txt",
+          "line_number": 1,
+          "line_content": "pillow>=10.0.0\nimageio>=2.31.0\nimageio-ffmpeg>=0.4.9\nnumpy>=1.24.0",
+          "suggestion": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions. Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unverifiable Dependency: pillow has 16 known advisory(ies) (CVE-2026-112390 (Pillow: Infinite loop in MIC n_frames when the embedded TIFF); CVE-2026-96638 (Pillow: BMP RLE decoder memory-amplification DoS via unbounded delta escape / ab); CVE-2026-112391 (Pillow: PdfParser can recurse without limit in get_value() and linearize_page_tr) +13 more), but the manifest does not pin a version, so it is unknown whether the installed release is affected (SC4)",
+          "message": "Supply Chain: pillow",
+          "file_path": "requirements.txt",
+          "line_number": 1,
+          "line_content": null,
+          "suggestion": "Dependency has known vulnerabilities (CVEs). Using packages with unpatched security flaws exposes the environment to known exploits. Update the dependency to a patched version that addresses the known CVE. Check OSV (osv.dev) or NVD for details on the vulnerability.",
+          "metadata": {
+            "skillspector_confidence": 0.4
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unpinned Dependencies (SC1)",
+          "message": "Supply Chain: imageio>=2.31.0",
+          "file_path": "requirements.txt",
+          "line_number": 2,
+          "line_content": "pillow>=10.0.0\nimageio>=2.31.0\nimageio-ffmpeg>=0.4.9\nnumpy>=1.24.0",
+          "suggestion": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions. Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unpinned Dependencies (SC1)",
+          "message": "Supply Chain: imageio-ffmpeg>=0.4.9",
+          "file_path": "requirements.txt",
+          "line_number": 3,
+          "line_content": "pillow>=10.0.0\nimageio>=2.31.0\nimageio-ffmpeg>=0.4.9\nnumpy>=1.24.0",
+          "suggestion": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions. Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unpinned Dependencies (SC1)",
+          "message": "Supply Chain: numpy>=1.24.0",
+          "file_path": "requirements.txt",
+          "line_number": 4,
+          "line_content": "pillow>=10.0.0\nimageio>=2.31.0\nimageio-ffmpeg>=0.4.9\nnumpy>=1.24.0",
+          "suggestion": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions. Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unverifiable Dependency: numpy has 16 known advisory(ies) (CVE-2014-1859 (Numpy arbitrary file write via symlink attack); CVE-2021-41495 (NumPy NULL Pointer Dereference); CVE-2021-33430 (NumPy Buffer Overflow (Disputed)) +13 more), but the manifest does not pin a version, so it is unknown whether the installed release is affected (SC4)",
+          "message": "Supply Chain: numpy",
+          "file_path": "requirements.txt",
+          "line_number": 4,
+          "line_content": null,
+          "suggestion": "Dependency has known vulnerabilities (CVEs). Using packages with unpatched security flaws exposes the environment to known exploits. Update the dependency to a patched version that addresses the known CVE. Check OSV (osv.dev) or NVD for details on the vulnerability.",
+          "metadata": {
+            "skillspector_confidence": 0.4
+          }
+        }
+      ],
+      "success_details": [],
+      "legacy": {
+        "errors": [
+          "skillspector JSON field 'analysis_completeness' reports incomplete analysis (status 'partial'); security scan did not complete"
+        ],
+        "warnings": [
+          "[SECURITY-LOW] Supply Chain: pillow>=10.0.0 in requirements.txt:1",
+          "[SECURITY-LOW] Supply Chain: pillow in requirements.txt:1",
+          "[SECURITY-LOW] Supply Chain: imageio>=2.31.0 in requirements.txt:2",
+          "[SECURITY-LOW] Supply Chain: imageio-ffmpeg>=0.4.9 in requirements.txt:3",
+          "[SECURITY-LOW] Supply Chain: numpy>=1.24.0 in requirements.txt:4",
+          "[SECURITY-LOW] Supply Chain: numpy in requirements.txt:4"
+        ],
+        "messages": []
+      },
+      "skillspector_version": "2.13.3",
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "security"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "PII Scan",
+      "description": "Detect PII and local identifiers",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 7,
+        "checks_performed": 2,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "pii_scan_start",
+          "message": "Scanning 7 files for PII",
+          "metadata": {
+            "file_count": 7
+          }
+        },
+        {
+          "check": "pii_detection",
+          "message": "No PII detected in 7 files (emails, SSNs, phone numbers, paths)",
+          "metadata": {
+            "files_scanned": 7
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] pii_scan_start: Scanning 7 files for PII",
+          "[OK] pii_detection: No PII detected in 7 files (emails, SSNs, phone numbers, paths)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "pii"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "License Compliance",
+      "description": "Validate license compliance for Skills, Rules, and Workflows",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "license_compliance",
+          "message": "License compliance scan completed (allowed)",
+          "metadata": {
+            "license_status": "allowed"
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "Tier 1: Found license declaration in frontmatter (SKILL.md)",
+          "  License field references file: 'Complete terms in LICENSE.txt'",
+          "License: Apache-2.0 (ALLOWED - permissive)",
+          "[OK] license_compliance: License compliance scan completed (allowed)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "license"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Code Risk Analysis",
+      "description": "Static code analysis using Bandit and packaged Semgrep rules",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "scanners": {
+        "bandit": "1.9.4",
+        "semgrep": "1.182.0"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 2,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "bandit",
+          "message": "Bandit: No security issues found",
+          "metadata": null
+        },
+        {
+          "check": "semgrep",
+          "message": "Semgrep: No security issues found",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "Found 4 Python, 0 Shell, 0 JavaScript/TypeScript files",
+          "[OK] bandit: Bandit: No security issues found",
+          "[OK] semgrep: Semgrep: No security issues found"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Secrets Detection",
+      "description": "Detect hardcoded secrets, API keys, and credentials using Gitleaks",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "scanners": {
+        "gitleaks": "8.30.0"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "gitleaks",
+          "message": "No secrets detected by Gitleaks",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] gitleaks: No secrets detected by Gitleaks"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Code Integrity & Hygiene",
+      "description": "Validate dead links, dependencies, and static Python test-file discovery",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 1,
+        "checks_performed": 5,
+        "errors": 0,
+        "warnings": 1,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "dead_links_scan",
+          "message": "Checking 1 markdown files for dead links",
+          "metadata": {
+            "file_count": 1
+          }
+        },
+        {
+          "check": "dead_links",
+          "message": "All relative links valid in 1 markdown file(s)",
+          "metadata": {
+            "files_checked": 1
+          }
+        },
+        {
+          "check": "dependency_audit",
+          "message": "Auditing requirements.txt",
+          "metadata": null
+        },
+        {
+          "check": "dependency_audit",
+          "message": "requirements.txt passed dependency audit",
+          "metadata": null
+        },
+        {
+          "check": "test_discovery",
+          "message": "No standard Python test-file candidates found; target tests were not executed and coverage was not measured. Consider adding tests.",
+          "metadata": {
+            "test_count": 0,
+            "execution_performed": false,
+            "coverage_measured": false,
+            "patterns": [
+              "test_*.py",
+              "*_test.py"
+            ]
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "No standard Python test-file candidates found; consider adding tests"
+        ],
+        "messages": [
+          "[OK] dead_links_scan: Checking 1 markdown files for dead links",
+          "[OK] dead_links: All relative links valid in 1 markdown file(s)",
+          "[OK] dependency_audit: Auditing requirements.txt",
+          "[OK] dependency_audit: requirements.txt passed dependency audit",
+          "[OK] test_discovery: No standard Python test-file candidates found; target tests were not executed and coverage was not measured. Consider adding tests."
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Dependency Vulnerability Audit",
+      "description": "Scan dependencies for CVE vulnerabilities using pip-audit and Safety",
+      "passed": false,
+      "status": "incomplete",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [
+        "pip-audit"
+      ],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 4,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "requirements.txt: line 1 requires an exact package version; URLs, local paths, includes and pip options are not audited",
+          "requirements.txt: line 2 requires an exact package version; URLs, local paths, includes and pip options are not audited",
+          "requirements.txt: line 3 requires an exact package version; URLs, local paths, includes and pip options are not audited",
+          "requirements.txt: line 4 requires an exact package version; URLs, local paths, includes and pip options are not audited"
+        ],
+        "messages": [
+          "Auditing requirements.txt",
+          "requirements.txt: auditing explicit pins only; dependencies are not resolved or installed"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "dependency"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Unicode Smuggling Detection",
+      "description": "Detect invisible Unicode characters and ASCII smuggling",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 7,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "unicode_scan",
+          "message": "No invisible Unicode characters detected in 7 file(s)",
+          "metadata": {
+            "files_scanned": 7
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] unicode_scan: No invisible Unicode characters detected in 7 file(s)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "unicode"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "QUALITY",
+      "description": "Skill quality scoring across Correctness (35%), Discoverability (25%), Reliability (25%), and Efficiency (15%)",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 8,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 3,
+        "low_count": 5
+      },
+      "findings": [
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'version'",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "Description very long (227 chars, recommend 50-150)",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Keep descriptions concise for progressive disclosure",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "No '## Purpose' section",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add purpose section to clarify use cases",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No prerequisites/requirements documented",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Document dependencies, API keys, or setup needed",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No limitations documented",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Limitations' section with known issues/constraints",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No troubleshooting section documented",
+          "file_path": "/workspace/skills/slack-gif-creator/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "quality_score",
+          "message": "Score: 88.5/100 (Grade: B)",
+          "metadata": {
+            "overall_score": 88.5,
+            "grade": "B",
+            "skill_type": "guide-only"
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'version' in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'metadata.author' in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'metadata.tags' in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[QUALITY-LOW] Description very long (227 chars, recommend 50-150) in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[QUALITY-LOW] No '## Purpose' section in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[QUALITY-LOW] No prerequisites/requirements documented in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[QUALITY-LOW] No limitations documented in /workspace/skills/slack-gif-creator/SKILL.md",
+          "[QUALITY-LOW] No troubleshooting section documented in /workspace/skills/slack-gif-creator/SKILL.md"
+        ],
+        "messages": [
+          "[OK] quality_score: Score: 88.5/100 (Grade: B)"
+        ]
+      },
+      "quality": {
+        "overall_score": 88.5,
+        "grade": "B",
+        "skill_type": "guide-only",
+        "skill_name": "slack-gif-creator",
+        "dimensions": {
+          "correctness": {
+            "score": 85.0,
+            "weight": 0.35,
+            "issues_count": 3,
+            "issues": [
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'version'",
+                "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+                "deduction": 5
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+                "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+                "deduction": 5
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+                "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+                "deduction": 5
+              }
+            ]
+          },
+          "discoverability": {
+            "score": 90.0,
+            "weight": 0.25,
+            "issues_count": 2,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "Description very long (227 chars, recommend 50-150)",
+                "suggestion": "Keep descriptions concise for progressive disclosure",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No '## Purpose' section",
+                "suggestion": "Add purpose section to clarify use cases",
+                "deduction": 5
+              }
+            ]
+          },
+          "reliability": {
+            "score": 85.0,
+            "weight": 0.25,
+            "issues_count": 3,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "No prerequisites/requirements documented",
+                "suggestion": "Document dependencies, API keys, or setup needed",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No limitations documented",
+                "suggestion": "Add '## Limitations' section with known issues/constraints",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No troubleshooting section documented",
+                "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+                "deduction": 5
+              }
+            ]
+          },
+          "efficiency": {
+            "score": 100.0,
+            "weight": 0.15,
+            "issues_count": 0,
+            "issues": []
+          }
+        },
+        "metrics": {
+          "total_tokens": 1960,
+          "recommended_max_tokens": 5000,
+          "frontmatter_tokens": 75,
+          "instructions_tokens": 1882,
+          "script_count": 0,
+          "has_examples": true,
+          "has_error_handling": true,
+          "has_frontmatter": true,
+          "has_instructions": false,
+          "has_scripts": false,
+          "has_lib_module": false
+        }
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "quality"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "SCRIPT_LINT",
+      "description": "AST-based code quality checks for skill scripts",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "lint",
+          "message": "No scripts/ or tools/ directory found",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] lint: No scripts/ or tools/ directory found"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "slack-gif-creator",
+        "skill_digest": "sha256:f093f5105e44a914906a4391dc9a522fdb6721c4a54576b2518c686e4cf748cf",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "lint"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    }
+  ],
+  "benchmark_policy": {
+    "tier2_required": true,
+    "tier3_required": true
+  },
+  "publication_status": "incomplete",
+  "publication": {
+    "status": "incomplete",
+    "eligible": false,
+    "reasons": [
+      "One or more validators reported incomplete scanner evidence."
+    ],
+    "tier3": {
+      "status": "not_run",
+      "evidence_complete": false,
+      "execution_status": "not_run",
+      "verdict": "not_run",
+      "reason": "Tier 3 lacks publication-complete execution evidence."
+    }
+  },
+  "policy": {
+    "profile": "external",
+    "audience": "external",
+    "digest": "sha256:1caeb0bf9c2e044705f32fcdbd773fea4d835d895b4e0ab20d1aaa5e28acd660",
+    "author_email_regex": null,
+    "severity_overrides": {
+      "SCHEMA.author_missing": "high",
+      "SCHEMA.author_format": "high",
+      "WORKFLOWS.author_format": "high",
+      "LICENSE.*": "critical"
+    },
+    "source": "/opt/skillevaluator/.venv/lib/python3.12/site-packages/skillevaluator/config/profiles/external.yaml"
+  },
+  "quality_config": {
+    "source": "packaged",
+    "file": null,
+    "digest": "sha256:b70a47b94b92e0e3a82f704930dad392b753df162aa30463ce0567d24ee76e49",
+    "min_score": 70
+  },
+  "evaluated_source": null,
+  "gating": {
+    "tiers": {
+      "1": {
+        "blocking": true,
+        "validators": [
+          "Schema & Repository Governance",
+          "Semantic Version Validation",
+          "Security Scan",
+          "PII Scan",
+          "License Compliance",
+          "Code Risk Analysis",
+          "Secrets Detection",
+          "Code Integrity & Hygiene",
+          "Dependency Vulnerability Audit",
+          "Unicode Smuggling Detection",
+          "QUALITY",
+          "SCRIPT_LINT"
+        ]
+      }
+    }
+  },
+  "workflow": {
+    "tier": 1,
+    "stages": {
+      "validation": {
+        "status": "incomplete"
+      },
+      "llm": {
+        "status": "skipped",
+        "reason": "LLM checks disabled by --no-llm."
+      }
+    }
+  },
+  "quality_summary": [
+    {
+      "overall_score": 88.5,
+      "grade": "B",
+      "skill_type": "guide-only",
+      "skill_name": "slack-gif-creator",
+      "dimensions": {
+        "correctness": {
+          "score": 85.0,
+          "weight": 0.35,
+          "issues_count": 3,
+          "issues": [
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'version'",
+              "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+              "deduction": 5
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+              "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+              "deduction": 5
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+              "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+              "deduction": 5
+            }
+          ]
+        },
+        "discoverability": {
+          "score": 90.0,
+          "weight": 0.25,
+          "issues_count": 2,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "Description very long (227 chars, recommend 50-150)",
+              "suggestion": "Keep descriptions concise for progressive disclosure",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No '## Purpose' section",
+              "suggestion": "Add purpose section to clarify use cases",
+              "deduction": 5
+            }
+          ]
+        },
+        "reliability": {
+          "score": 85.0,
+          "weight": 0.25,
+          "issues_count": 3,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "No prerequisites/requirements documented",
+              "suggestion": "Document dependencies, API keys, or setup needed",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No limitations documented",
+              "suggestion": "Add '## Limitations' section with known issues/constraints",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No troubleshooting section documented",
+              "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+              "deduction": 5
+            }
+          ]
+        },
+        "efficiency": {
+          "score": 100.0,
+          "weight": 0.15,
+          "issues_count": 0,
+          "issues": []
+        }
+      },
+      "metrics": {
+        "total_tokens": 1960,
+        "recommended_max_tokens": 5000,
+        "frontmatter_tokens": 75,
+        "instructions_tokens": 1882,
+        "script_count": 0,
+        "has_examples": true,
+        "has_error_handling": true,
+        "has_frontmatter": true,
+        "has_instructions": false,
+        "has_scripts": false,
+        "has_lib_module": false
+      }
+    }
+  ],
+  "generated_at": "2026-11-03T01:25:15.464006+00:00"
+}

@@ -1,0 +1,1835 @@
+{
+  "overall_passed": false,
+  "overall_status": "failed",
+  "incomplete_scans": [
+    "skillspector"
+  ],
+  "total_validators": 12,
+  "total_skipped": 0,
+  "total_advisory_skipped": 0,
+  "total_errors": 13,
+  "total_warnings": 36,
+  "severity_counts": {
+    "critical": 0,
+    "high": 11,
+    "medium": 20,
+    "low": 15
+  },
+  "skills": [
+    {
+      "name": "mcp-builder",
+      "passed": false,
+      "issue_count": 46
+    }
+  ],
+  "contributors": [
+    {
+      "author": "Unknown",
+      "items": [
+        {
+          "name": "mcp-builder",
+          "passed": false,
+          "issue_count": 46
+        }
+      ],
+      "total_items": 1,
+      "passed_count": 0,
+      "failed_count": 1,
+      "total_issues": 46
+    }
+  ],
+  "results": [
+    {
+      "validator": "Schema & Repository Governance",
+      "description": "Validate SKILL.md frontmatter and repository structure",
+      "passed": false,
+      "status": "failed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 8,
+        "errors": 1,
+        "warnings": 5,
+        "critical_count": 0,
+        "high_count": 1,
+        "medium_count": 2,
+        "low_count": 2
+      },
+      "findings": [
+        {
+          "category": "SCHEMA",
+          "severity": "medium",
+          "check_name": "body_recommended_section",
+          "message": "Missing recommended section: '## Instructions'",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider adding a '## Instructions' or '## Usage' section. Per agentskills.io the body format is unrestricted, so this is a convention nudge \u2014 it also gives the quality scorer a stable anchor for instruction-quality heuristics.",
+          "metadata": {
+            "missing_section": "## Instructions"
+          }
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "medium",
+          "check_name": "body_recommended_section",
+          "message": "Missing recommended section: '## Examples'",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider adding a '## Examples' section. If examples are already inline under instructions, this can be skipped.",
+          "metadata": {
+            "missing_section": "## Examples"
+          }
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "low",
+          "check_name": "unexpected_file",
+          "message": "Unexpected 'reference' in skill root",
+          "file_path": "/workspace/skills/mcp-builder/reference",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider moving to one of: agents/, assets/, config/, evals/, references/, scripts/, tests/, tools/. To allow additional directories, set $SKILLEVALUATOR_SCHEMA_ALLOWED_DIRS.",
+          "metadata": null
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "low",
+          "check_name": "unexpected_file",
+          "message": "Unexpected 'LICENSE.txt' in skill root",
+          "file_path": "/workspace/skills/mcp-builder/LICENSE.txt",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Consider moving to one of: agents/, assets/, config/, evals/, references/, scripts/, tests/, tools/. To allow additional directories, set $SKILLEVALUATOR_SCHEMA_ALLOWED_DIRS.",
+          "metadata": null
+        },
+        {
+          "category": "SCHEMA",
+          "severity": "high",
+          "check_name": "author_missing",
+          "message": "Author not specified in metadata",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'metadata.author' field with format 'Name <email@example.com>'",
+          "metadata": {
+            "profile": "external"
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "manifest_exists",
+          "message": "Found skill manifest: SKILL.md",
+          "metadata": {
+            "file_path": "/workspace/skills/mcp-builder/SKILL.md"
+          }
+        },
+        {
+          "check": "frontmatter_valid",
+          "message": "Valid frontmatter for skill 'mcp-builder'",
+          "metadata": {
+            "description_length": 277
+          }
+        },
+        {
+          "check": "folder_hierarchy",
+          "message": "Valid general skill structure: skills/mcp-builder/",
+          "metadata": null
+        },
+        {
+          "check": "naming_convention",
+          "message": "Folder name 'mcp-builder' follows kebab-case convention",
+          "metadata": {
+            "name_length": 11
+          }
+        },
+        {
+          "check": "line_count",
+          "message": "SKILL.md within line limit (252/500)",
+          "metadata": {
+            "line_count": 252,
+            "limit": 500
+          }
+        },
+        {
+          "check": "body_heading",
+          "message": "Body contains a top-level heading",
+          "metadata": null
+        },
+        {
+          "check": "optional_files",
+          "message": "Found optional supporting files: scripts",
+          "metadata": {
+            "files_found": [
+              "scripts"
+            ]
+          }
+        },
+        {
+          "check": "name_consistency",
+          "message": "Directory name matches frontmatter: 'mcp-builder'",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [
+          "[SCHEMA-HIGH] Author not specified in metadata in /workspace/skills/mcp-builder/SKILL.md"
+        ],
+        "warnings": [
+          "[SCHEMA-MEDIUM] Missing recommended section: '## Instructions' in /workspace/skills/mcp-builder/SKILL.md",
+          "[SCHEMA-MEDIUM] Missing recommended section: '## Examples' in /workspace/skills/mcp-builder/SKILL.md",
+          "[SCHEMA-LOW] Unexpected 'reference' in skill root in /workspace/skills/mcp-builder/reference",
+          "[SCHEMA-LOW] Unexpected 'LICENSE.txt' in skill root in /workspace/skills/mcp-builder/LICENSE.txt",
+          "Workflow scope: llm skipped. LLM checks disabled by --no-llm."
+        ],
+        "messages": [
+          "[OK] manifest_exists: Found skill manifest: SKILL.md",
+          "[OK] frontmatter_valid: Valid frontmatter for skill 'mcp-builder'",
+          "[OK] folder_hierarchy: Valid general skill structure: skills/mcp-builder/",
+          "[OK] naming_convention: Folder name 'mcp-builder' follows kebab-case convention",
+          "[OK] line_count: SKILL.md within line limit (252/500)",
+          "[OK] body_heading: Body contains a top-level heading",
+          "[OK] optional_files: Found optional supporting files: scripts",
+          "[OK] name_consistency: Directory name matches frontmatter: 'mcp-builder'"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "schema"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Semantic Version Validation",
+      "description": "Validate optional metadata.version labels and require strict bumps",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "version_optional",
+          "message": "No semantic version label present; resource will use commit-hash history",
+          "metadata": {
+            "previous_version": null
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] version_optional: No semantic version label present; resource will use commit-hash history"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "version"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Security Scan",
+      "description": "Detect security vulnerabilities and PII/secrets",
+      "passed": false,
+      "status": "failed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [
+        "skillspector"
+      ],
+      "scanners": {
+        "skillspector": "2.13.3"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 10,
+        "warnings": 16,
+        "critical_count": 0,
+        "high_count": 9,
+        "medium_count": 12,
+        "low_count": 4
+      },
+      "findings": [
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "Incomplete referenced artifact analysis (AE1)",
+          "message": "analysis-evasion: reference/node_mcp_server_v2.md (partial)",
+          "file_path": "SKILL.md",
+          "line_number": 71,
+          "line_content": "- [\u26a1 TypeScript Guide (v2)](./reference/node_mcp_server_v2.md) - TypeScript patterns and examples",
+          "suggestion": "Referenced artifact was not completely inspected Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+          "metadata": {
+            "skillspector_confidence": 1.0
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "Incomplete referenced artifact analysis (AE1)",
+          "message": "analysis-evasion: reference/node_mcp_server_v2.md (partial)",
+          "file_path": "SKILL.md",
+          "line_number": 93,
+          "line_content": "- [\u26a1 TypeScript Guide (v2)](./reference/node_mcp_server_v2.md) - Project structure, package.json, tsconfig.json ([v1](./reference/node_mcp_server.md) for existi",
+          "suggestion": "Referenced artifact was not completely inspected Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+          "metadata": {
+            "skillspector_confidence": 1.0
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "Incomplete referenced artifact analysis (AE1)",
+          "message": "analysis-evasion: reference/node_mcp_server_v2.md (partial)",
+          "file_path": "SKILL.md",
+          "line_number": 151,
+          "line_content": "- v2 projects: run the self-check script from the [v2 guide](./reference/node_mcp_server_v2.md#verify-your-server) against the built server",
+          "suggestion": "Referenced artifact was not completely inspected Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+          "metadata": {
+            "skillspector_confidence": 1.0
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "Incomplete referenced artifact analysis (AE1)",
+          "message": "analysis-evasion: reference/node_mcp_server_v2.md (partial)",
+          "file_path": "SKILL.md",
+          "line_number": 235,
+          "line_content": "- [\u26a1 TypeScript Implementation Guide (SDK v2)](./reference/node_mcp_server_v2.md) - Complete TypeScript guide for `@modelcontextprotocol/server` with:",
+          "suggestion": "Referenced artifact was not completely inspected Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Keep required references; incomplete analysis is not proof of malicious evasion.",
+          "metadata": {
+            "skillspector_confidence": 1.0
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "Incomplete referenced artifact analysis (AE1)",
+          "message": "analysis-evasion: reference/node_mcp_server.md (partial)",
+          "file_path": "SKILL.md",
+          "line_number": 72,
+          "line_content": "lcontextprotocol/typescript-sdk/v1.x/README.md` and the [TypeScript Guide (v1)](./reference/node_mcp_server.md)",
+          "suggestion": "Referenced artifact was not completely inspected Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Review the target's analysis-completeness ledger and resolve all limitations. Keep required references; incomplete analysis is not proof of malicious evasion.",
+          "metadata": {
+            "skillspector_confidence": 1.0
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "Incomplete referenced artifact analysis (AE1)",
+          "message": "analysis-evasion: reference/node_mcp_server.md (partial)",
+          "file_path": "SKILL.md",
+          "line_number": 93,
+          "line_content": "e/node_mcp_server_v2.md) - Project structure, package.json, tsconfig.json ([v1](./reference/node_mcp_server.md) for existing v1 projects)",
+          "suggestion": "Referenced artifact was not completely inspected Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Review the target's analysis-completeness ledger and resolve all limitations. Keep required references; incomplete analysis is not proof of malicious evasion.",
+          "metadata": {
+            "skillspector_confidence": 1.0
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "Incomplete referenced artifact analysis (AE1)",
+          "message": "analysis-evasion: reference/node_mcp_server.md (partial)",
+          "file_path": "SKILL.md",
+          "line_number": 244,
+          "line_content": "- [\u26a1 TypeScript Implementation Guide (SDK v1)](./reference/node_mcp_server.md) - The equivalent guide for existing `@modelcontextprotocol/sdk` projects",
+          "suggestion": "Referenced artifact was not completely inspected Review the reported expression and analyzer's parsing limitation; correct the scanner if it misinterprets valid source, then rerun the scan. Review the target's analysis-completeness ledger and resolve all limitations. Keep required references; incomplete analysis is not proof of malicious evasion.",
+          "metadata": {
+            "skillspector_confidence": 1.0
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "External Model or Provider Selection (EA5)",
+          "message": "Excessive Agency: -m, --model           Claude model to use (default: claude-3-7-sonnet-20250219)",
+          "file_path": "reference/evaluation.md",
+          "line_number": 488,
+          "line_content": "optional arguments:\n  -h, --help            Show help message\n  -t, --transport       Transport type: stdio, sse, or http (default: stdio)\n  -m, --model           Claude model to use (default: claude-",
+          "suggestion": "Skill selects an external model or provider that may use a different account or billing plan than the operator expects. Undisclosed model switches can cause unexpected cost or quota consumption. Remove the model/provider override or disclose it prominently and require explicit operator approval before invoking an external coding CLI or billed model.",
+          "metadata": {
+            "skillspector_confidence": 0.9
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "high",
+          "check_name": "Credential Access (PE3)",
+          "message": "Privilege Escalation: access tokens",
+          "file_path": "reference/mcp_best_practices.md",
+          "line_number": 158,
+          "line_content": "\n**OAuth 2.1**:\n- Use secure OAuth 2.1 with certificates from recognized authorities\n- Validate access tokens before processing requests\n- Only accept tokens specifically intended for your server\n\n**A",
+          "suggestion": "Code accesses credential files (SSH keys, AWS credentials, etc.). This could indicate credential theft attempts. Remove references to credential paths. Use environment variables or secrets managers. For docs, use placeholder paths (e.g., /path/to/config). Never load .env or token files in production code paths.",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unknown (LP3)",
+          "message": "MCP Least Privilege: Without declared permissions the skill's intent is opaque and cannot be validated.",
+          "file_path": "SKILL.md",
+          "line_number": 1,
+          "line_content": null,
+          "suggestion": "Without declared permissions the skill's intent is opaque and cannot be validated. Declare the skill's tool scope: for Claude Code / Agent Skills SKILL.md, list the tools the skill may invoke in the 'allowed-tools' frontmatter field; for MCP server manifests, add a 'permissions' list naming the required capabilities.",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unknown (RP1)",
+          "message": "MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub",
+          "file_path": "SKILL.md",
+          "line_number": 64,
+          "line_content": null,
+          "suggestion": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update. Pin the version: npx @scope/server@1.2.3",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unknown (RP1)",
+          "message": "MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub",
+          "file_path": "SKILL.md",
+          "line_number": 66,
+          "line_content": null,
+          "suggestion": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update. Pin the version: npx @scope/server@1.2.3",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unknown (RP1)",
+          "message": "MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub",
+          "file_path": "reference/node_mcp_server_v2.md",
+          "line_number": 712,
+          "line_content": null,
+          "suggestion": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update. Pin the version: npx @scope/server@1.2.3",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unknown (RP1)",
+          "message": "MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub",
+          "file_path": "SKILL.md",
+          "line_number": 152,
+          "line_content": null,
+          "suggestion": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update. Pin the version: npx @scope/server@1.2.3",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unknown (RP1)",
+          "message": "MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub",
+          "file_path": "reference/node_mcp_server_v2.md",
+          "line_number": 684,
+          "line_content": null,
+          "suggestion": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update. Pin the version: npx @scope/server@1.2.3",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unrestricted Tool Access (EA1)",
+          "message": "Excessive Agency: call any tools",
+          "file_path": "reference/evaluation.md",
+          "line_number": 205,
+          "line_content": "After understanding the API and tools, USE the MCP server tools:\n- Inspect content using READ-ONLY and NON-DESTRUCTIVE operations ONLY\n- Goal: identify specific content (e.g., users, channels, message",
+          "suggestion": "Skill grants unrestricted tool access without appropriate constraints. An agent with unfettered tool access can perform arbitrary actions including file modification, network requests, and code execution. Restrict tool access to only the tools required for the skill's stated purpose. Use an explicit allowlist rather than granting blanket access.",
+          "metadata": {
+            "skillspector_confidence": 0.8
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "External Transmission (E1)",
+          "message": "Data Exfiltration: https://api.example.com/",
+          "file_path": "reference/node_mcp_server.md",
+          "line_number": 603,
+          "line_content": "import axios, { AxiosError } from \"axios\";\n\n// Constants\nconst API_BASE_URL = \"https://api.example.com/v1\";\nconst CHARACTER_LIMIT = 25000;\n\n// Enums",
+          "suggestion": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended. Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "External Transmission (E1)",
+          "message": "Data Exfiltration: https://api.example.com/",
+          "file_path": "reference/node_mcp_server_v2.md",
+          "line_number": 294,
+          "line_content": "import { serveStdio } from \"@modelcontextprotocol/server/stdio\";\nimport * as z from \"zod/v4\";\n\nconst API_BASE_URL = \"https://api.example.com/v1\";\nconst API_KEY = process.env.EXAMPLE_API_KEY;\nconst CHA",
+          "suggestion": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended. Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "External Transmission (E1)",
+          "message": "Data Exfiltration: https://api.example.com/",
+          "file_path": "reference/python_mcp_server.md",
+          "line_number": 353,
+          "line_content": "mcp = FastMCP(\"example_mcp\")\n\n# Constants\nAPI_BASE_URL = \"https://api.example.com/v1\"\n\n# Enums\nclass ResponseFormat(str, Enum):",
+          "suggestion": "Data is being sent to an external URL. This could be legitimate telemetry or data exfiltration. Manual review is recommended. Verify the destination URL is trusted and necessary. Remove or replace with documented APIs. Ensure no secrets, tokens, or PII are transmitted.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Autonomous Decision Making (EA2)",
+          "message": "Excessive Agency: auto-approve",
+          "file_path": "reference/node_mcp_server_v2.md",
+          "line_number": 193,
+          "line_content": "\n### Annotations\n\nAnnotations are hints for clients, for example to auto-approve read-only tools or to confirm destructive ones. They never change how the SDK runs the tool.\n\n| Annotation | Set to `tr",
+          "suggestion": "Skill enables autonomous high-impact decisions without human-in-the-loop verification. Critical operations (destructive commands, financial transactions, data deletion) should require explicit user confirmation. Add human-in-the-loop confirmation for destructive, irreversible, or high-impact operations. Never auto-execute commands that modify files, send data, or alter system state.",
+          "metadata": {
+            "skillspector_confidence": 0.85
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "medium",
+          "check_name": "Unknown (RP1)",
+          "message": "MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub",
+          "file_path": "reference/node_mcp_server_v2.md",
+          "line_number": 714,
+          "line_content": null,
+          "suggestion": "npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and publishes a malicious update. Pin the version: npx @scope/server@1.2.3",
+          "metadata": {
+            "skillspector_confidence": 0.7
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unpinned Dependencies (SC1)",
+          "message": "Supply Chain: anthropic>=0.39.0",
+          "file_path": "scripts/requirements.txt",
+          "line_number": 1,
+          "line_content": "anthropic>=0.39.0\nmcp>=1.1.0",
+          "suggestion": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions. Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unverifiable Dependency: anthropic has 4 known advisory(ies) (CVE-2026-34450 (Claude SDK for Python has Insecure Default File Permissions in Local Filesystem ); CVE-2026-34452 (Claude SDK for Python: Memory Tool Path Validation Race Condition Allows Sandbox); CVE-2026-34450 (The Claude SDK for Python provides access to the Claude API from Python applicat) +1 more), but the manifest does not pin a version, so it is unknown whether the installed release is affected (SC4)",
+          "message": "Supply Chain: anthropic",
+          "file_path": "scripts/requirements.txt",
+          "line_number": 1,
+          "line_content": null,
+          "suggestion": "Dependency has known vulnerabilities (CVEs). Using packages with unpatched security flaws exposes the environment to known exploits. Update the dependency to a patched version that addresses the known CVE. Check OSV (osv.dev) or NVD for details on the vulnerability.",
+          "metadata": {
+            "skillspector_confidence": 0.4
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unpinned Dependencies (SC1)",
+          "message": "Supply Chain: mcp>=1.1.0\n",
+          "file_path": "scripts/requirements.txt",
+          "line_number": 2,
+          "line_content": "anthropic>=0.39.0\nmcp>=1.1.0",
+          "suggestion": "Dependencies lack version pinning, allowing potential malicious package updates. Consider pinning versions. Pin all dependency versions in requirements.txt or pyproject.toml. Use exact versions (==) or compatible ranges. Run pip-audit regularly.",
+          "metadata": {
+            "skillspector_confidence": 0.5
+          }
+        },
+        {
+          "category": "SECURITY",
+          "severity": "low",
+          "check_name": "Unverifiable Dependency: mcp has 16 known advisory(ies) (CVE-2025-53366 (MCP Python SDK vulnerability in the FastMCP Server causes validation error, lead); CVE-2026-116685 (Model Context Protocol Python SDK: HTTP client transports followed cross-origin ); CVE-2026-59951 (MCP Python SDK: Unbounded Session Accumulation in StreamableHTTP Transport Enabl) +13 more), but the manifest does not pin a version, so it is unknown whether the installed release is affected (SC4)",
+          "message": "Supply Chain: mcp",
+          "file_path": "scripts/requirements.txt",
+          "line_number": 2,
+          "line_content": null,
+          "suggestion": "Dependency has known vulnerabilities (CVEs). Using packages with unpatched security flaws exposes the environment to known exploits. Update the dependency to a patched version that addresses the known CVE. Check OSV (osv.dev) or NVD for details on the vulnerability.",
+          "metadata": {
+            "skillspector_confidence": 0.4
+          }
+        }
+      ],
+      "success_details": [],
+      "legacy": {
+        "errors": [
+          "skillspector JSON field 'analysis_completeness' reports incomplete analysis (status 'partial'); security scan did not complete",
+          "[SECURITY-HIGH] analysis-evasion: reference/node_mcp_server_v2.md (partial) in SKILL.md:71",
+          "[SECURITY-HIGH] analysis-evasion: reference/node_mcp_server_v2.md (partial) in SKILL.md:93",
+          "[SECURITY-HIGH] analysis-evasion: reference/node_mcp_server_v2.md (partial) in SKILL.md:151",
+          "[SECURITY-HIGH] analysis-evasion: reference/node_mcp_server_v2.md (partial) in SKILL.md:235",
+          "[SECURITY-HIGH] analysis-evasion: reference/node_mcp_server.md (partial) in SKILL.md:72",
+          "[SECURITY-HIGH] analysis-evasion: reference/node_mcp_server.md (partial) in SKILL.md:93",
+          "[SECURITY-HIGH] analysis-evasion: reference/node_mcp_server.md (partial) in SKILL.md:244",
+          "[SECURITY-HIGH] Excessive Agency: -m, --model           Claude model to use (default: claude-3-7-sonnet-20250219) in reference/evaluation.md:488",
+          "[SECURITY-HIGH] Privilege Escalation: access tokens in reference/mcp_best_practices.md:158"
+        ],
+        "warnings": [
+          "[SECURITY-MEDIUM] MCP Least Privilege: Without declared permissions the skill's intent is opaque and cannot be validated. in SKILL.md:1",
+          "[SECURITY-MEDIUM] MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub in SKILL.md:64",
+          "[SECURITY-MEDIUM] MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub in SKILL.md:66",
+          "[SECURITY-MEDIUM] MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub in reference/node_mcp_server_v2.md:712",
+          "[SECURITY-MEDIUM] MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub in SKILL.md:152",
+          "[SECURITY-MEDIUM] MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub in reference/node_mcp_server_v2.md:684",
+          "[SECURITY-MEDIUM] Excessive Agency: call any tools in reference/evaluation.md:205",
+          "[SECURITY-MEDIUM] Data Exfiltration: https://api.example.com/ in reference/node_mcp_server.md:603",
+          "[SECURITY-MEDIUM] Data Exfiltration: https://api.example.com/ in reference/node_mcp_server_v2.md:294",
+          "[SECURITY-MEDIUM] Data Exfiltration: https://api.example.com/ in reference/python_mcp_server.md:353",
+          "[SECURITY-MEDIUM] Excessive Agency: auto-approve in reference/node_mcp_server_v2.md:193",
+          "[SECURITY-MEDIUM] MCP Rug Pull: npx commands without a version suffix (e.g. @1.0.0) create a rug-pull risk if the upstream server is compromised and pub in reference/node_mcp_server_v2.md:714",
+          "[SECURITY-LOW] Supply Chain: anthropic>=0.39.0 in scripts/requirements.txt:1",
+          "[SECURITY-LOW] Supply Chain: anthropic in scripts/requirements.txt:1",
+          "[SECURITY-LOW] Supply Chain: mcp>=1.1.0\n in scripts/requirements.txt:2",
+          "[SECURITY-LOW] Supply Chain: mcp in scripts/requirements.txt:2"
+        ],
+        "messages": [
+          "skillspector risk score: 100/100 (CRITICAL)"
+        ]
+      },
+      "skillspector_version": "2.13.3",
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "security"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "PII Scan",
+      "description": "Detect PII and local identifiers",
+      "passed": false,
+      "status": "failed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 10,
+        "checks_performed": 1,
+        "errors": 1,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 1,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [
+        {
+          "category": "PII",
+          "severity": "high",
+          "check_name": "emails",
+          "message": "Non-placeholder email address: john@acme.com",
+          "file_path": "reference/node_mcp_server_v2.md",
+          "line_number": 397,
+          "line_content": "  - \"Look up john@acme.com\" -> query=\"john@acme.com\"",
+          "suggestion": "Remove the address or use a placeholder like user@example.com",
+          "metadata": {
+            "confidence": "high",
+            "matched_value": "john@acme.com",
+            "occurrence_count": 1,
+            "occurrences": [
+              {
+                "file": "reference/node_mcp_server_v2.md",
+                "line": 397
+              }
+            ]
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "pii_scan_start",
+          "message": "Scanning 10 files for PII",
+          "metadata": {
+            "file_count": 10
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [
+          "[PII-HIGH] Non-placeholder email address: john@acme.com in reference/node_mcp_server_v2.md:397"
+        ],
+        "warnings": [],
+        "messages": [
+          "[OK] pii_scan_start: Scanning 10 files for PII"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "pii"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "License Compliance",
+      "description": "Validate license compliance for Skills, Rules, and Workflows",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "license_compliance",
+          "message": "License compliance scan completed (allowed)",
+          "metadata": {
+            "license_status": "allowed"
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "Tier 1: Found license declaration in frontmatter (SKILL.md)",
+          "  License field references file: 'Complete terms in LICENSE.txt'",
+          "License: Apache-2.0 (ALLOWED - permissive)",
+          "[OK] license_compliance: License compliance scan completed (allowed)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "license"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Code Risk Analysis",
+      "description": "Static code analysis using Bandit and packaged Semgrep rules",
+      "passed": false,
+      "status": "failed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "scanners": {
+        "bandit": "1.9.4",
+        "semgrep": "1.182.0"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 1,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 1,
+        "low_count": 0
+      },
+      "findings": [
+        {
+          "category": "BANDIT",
+          "severity": "medium",
+          "check_name": "B314:blacklist",
+          "message": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called (CWE-20)",
+          "file_path": "/workspace/skills/mcp-builder/scripts/evaluation.py",
+          "line_number": 59,
+          "line_content": null,
+          "suggestion": "Review blacklist (B314) (CWE-20)",
+          "metadata": {
+            "cwe": 20
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "semgrep",
+          "message": "Semgrep: No security issues found",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [
+          "[BANDIT-MEDIUM] Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called (CWE-20) in /workspace/skills/mcp-builder/scripts/evaluation.py:59"
+        ],
+        "warnings": [],
+        "messages": [
+          "Found 2 Python, 0 Shell, 0 JavaScript/TypeScript files",
+          "Bandit found: 0 HIGH, 1 MEDIUM, 0 LOW",
+          "[OK] semgrep: Semgrep: No security issues found"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Secrets Detection",
+      "description": "Detect hardcoded secrets, API keys, and credentials using Gitleaks",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "scanners": {
+        "gitleaks": "8.30.0"
+      },
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "gitleaks",
+          "message": "No secrets detected by Gitleaks",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] gitleaks: No secrets detected by Gitleaks"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Code Integrity & Hygiene",
+      "description": "Validate dead links, dependencies, and static Python test-file discovery",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 6,
+        "checks_performed": 4,
+        "errors": 0,
+        "warnings": 1,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "dead_links_scan",
+          "message": "Checking 6 markdown files for dead links",
+          "metadata": {
+            "file_count": 6
+          }
+        },
+        {
+          "check": "dead_links",
+          "message": "All relative links valid in 6 markdown file(s)",
+          "metadata": {
+            "files_checked": 6
+          }
+        },
+        {
+          "check": "dependencies",
+          "message": "No dependency files found (requirements.txt, pyproject.toml)",
+          "metadata": null
+        },
+        {
+          "check": "test_discovery",
+          "message": "No standard Python test-file candidates found; target tests were not executed and coverage was not measured. Consider adding tests.",
+          "metadata": {
+            "test_count": 0,
+            "execution_performed": false,
+            "coverage_measured": false,
+            "patterns": [
+              "test_*.py",
+              "*_test.py"
+            ]
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "No standard Python test-file candidates found; consider adding tests"
+        ],
+        "messages": [
+          "[OK] dead_links_scan: Checking 6 markdown files for dead links",
+          "[OK] dead_links: All relative links valid in 6 markdown file(s)",
+          "[OK] dependencies: No dependency files found (requirements.txt, pyproject.toml)",
+          "[OK] test_discovery: No standard Python test-file candidates found; target tests were not executed and coverage was not measured. Consider adding tests."
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "code-integrity"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Dependency Vulnerability Audit",
+      "description": "Scan dependencies for CVE vulnerabilities using pip-audit and Safety",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "dependency_file_discovery",
+          "message": "No dependency files found - vulnerability audit is not applicable",
+          "metadata": null
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] dependency_file_discovery: No dependency files found - vulnerability audit is not applicable"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "dependency"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "Unicode Smuggling Detection",
+      "description": "Detect invisible Unicode characters and ASCII smuggling",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 10,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 0,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 0
+      },
+      "findings": [],
+      "success_details": [
+        {
+          "check": "unicode_scan",
+          "message": "No invisible Unicode characters detected in 10 file(s)",
+          "metadata": {
+            "files_scanned": 10
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [],
+        "messages": [
+          "[OK] unicode_scan: No invisible Unicode characters detected in 10 file(s)"
+        ]
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "unicode"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "QUALITY",
+      "description": "Skill quality scoring across Correctness (35%), Discoverability (25%), Reliability (25%), and Efficiency (15%)",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 1,
+        "errors": 0,
+        "warnings": 10,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 5,
+        "low_count": 5
+      },
+      "findings": [
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "No documented scripts in table format",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 10
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "Instructions don't mention 'run_script'",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add explicit run_script() call examples",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 10
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'version'",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "medium",
+          "check_name": "quality_correctness",
+          "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+          "metadata": {
+            "dimension": "correctness",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "Description very long (277 chars, recommend 50-150)",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Keep descriptions concise for progressive disclosure",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_discoverability",
+          "message": "No '## Purpose' section",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add purpose section to clarify use cases",
+          "metadata": {
+            "dimension": "discoverability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No prerequisites/requirements documented",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Document dependencies, API keys, or setup needed",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No limitations documented",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Limitations' section with known issues/constraints",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        },
+        {
+          "category": "QUALITY",
+          "severity": "low",
+          "check_name": "quality_reliability",
+          "message": "No troubleshooting section documented",
+          "file_path": "/workspace/skills/mcp-builder/SKILL.md",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+          "metadata": {
+            "dimension": "reliability",
+            "deduction": 5
+          }
+        }
+      ],
+      "success_details": [
+        {
+          "check": "quality_score",
+          "message": "Score: 81.5/100 (Grade: B)",
+          "metadata": {
+            "overall_score": 81.5,
+            "grade": "B",
+            "skill_type": "script-based"
+          }
+        }
+      ],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[QUALITY-MEDIUM] No documented scripts in table format in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-MEDIUM] Instructions don't mention 'run_script' in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'version' in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'metadata.author' in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-MEDIUM] SKILL_SPEC recommended field missing: 'metadata.tags' in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-LOW] Description very long (277 chars, recommend 50-150) in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-LOW] No '## Purpose' section in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-LOW] No prerequisites/requirements documented in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-LOW] No limitations documented in /workspace/skills/mcp-builder/SKILL.md",
+          "[QUALITY-LOW] No troubleshooting section documented in /workspace/skills/mcp-builder/SKILL.md"
+        ],
+        "messages": [
+          "[OK] quality_score: Score: 81.5/100 (Grade: B)"
+        ]
+      },
+      "quality": {
+        "overall_score": 81.5,
+        "grade": "B",
+        "skill_type": "script-based",
+        "skill_name": "mcp-builder",
+        "dimensions": {
+          "correctness": {
+            "score": 65.0,
+            "weight": 0.35,
+            "issues_count": 5,
+            "issues": [
+              {
+                "severity": "warning",
+                "message": "No documented scripts in table format",
+                "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+                "deduction": 10
+              },
+              {
+                "severity": "warning",
+                "message": "Instructions don't mention 'run_script'",
+                "suggestion": "Add explicit run_script() call examples",
+                "deduction": 10
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'version'",
+                "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+                "deduction": 5
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+                "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+                "deduction": 5
+              },
+              {
+                "severity": "warning",
+                "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+                "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+                "deduction": 5
+              }
+            ]
+          },
+          "discoverability": {
+            "score": 90.0,
+            "weight": 0.25,
+            "issues_count": 2,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "Description very long (277 chars, recommend 50-150)",
+                "suggestion": "Keep descriptions concise for progressive disclosure",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No '## Purpose' section",
+                "suggestion": "Add purpose section to clarify use cases",
+                "deduction": 5
+              }
+            ]
+          },
+          "reliability": {
+            "score": 85.0,
+            "weight": 0.25,
+            "issues_count": 3,
+            "issues": [
+              {
+                "severity": "info",
+                "message": "No prerequisites/requirements documented",
+                "suggestion": "Document dependencies, API keys, or setup needed",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No limitations documented",
+                "suggestion": "Add '## Limitations' section with known issues/constraints",
+                "deduction": 5
+              },
+              {
+                "severity": "info",
+                "message": "No troubleshooting section documented",
+                "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+                "deduction": 5
+              }
+            ]
+          },
+          "efficiency": {
+            "score": 100.0,
+            "weight": 0.15,
+            "issues_count": 0,
+            "issues": []
+          }
+        },
+        "metrics": {
+          "total_tokens": 2773,
+          "recommended_max_tokens": 5000,
+          "frontmatter_tokens": 86,
+          "instructions_tokens": 2684,
+          "script_count": 2,
+          "has_examples": true,
+          "has_error_handling": true,
+          "has_frontmatter": true,
+          "has_instructions": false,
+          "has_scripts": true,
+          "has_lib_module": false
+        }
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "quality"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    },
+    {
+      "validator": "SCRIPT_LINT",
+      "description": "AST-based code quality checks for skill scripts",
+      "passed": true,
+      "status": "passed",
+      "skipped": false,
+      "skip_reason": null,
+      "incomplete_scans": [],
+      "summary": {
+        "files_scanned": 0,
+        "checks_performed": 0,
+        "errors": 0,
+        "warnings": 4,
+        "critical_count": 0,
+        "high_count": 0,
+        "medium_count": 0,
+        "low_count": 4
+      },
+      "findings": [
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "connections.py contains magic numbers",
+          "file_path": "/workspace/skills/mcp-builder/scripts/connections.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "connections.py missing shebang line",
+          "file_path": "/workspace/skills/mcp-builder/scripts/connections.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "magic_numbers",
+          "message": "evaluation.py contains magic numbers",
+          "file_path": "/workspace/skills/mcp-builder/scripts/evaluation.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Extract magic numbers to named constants",
+          "metadata": null
+        },
+        {
+          "category": "SCRIPT_LINT",
+          "severity": "low",
+          "check_name": "missing_shebang",
+          "message": "evaluation.py missing shebang line",
+          "file_path": "/workspace/skills/mcp-builder/scripts/evaluation.py",
+          "line_number": null,
+          "line_content": null,
+          "suggestion": "Add: #!/usr/bin/env python3",
+          "metadata": null
+        }
+      ],
+      "success_details": [],
+      "legacy": {
+        "errors": [],
+        "warnings": [
+          "[SCRIPT_LINT-LOW] connections.py contains magic numbers in /workspace/skills/mcp-builder/scripts/connections.py",
+          "[SCRIPT_LINT-LOW] connections.py missing shebang line in /workspace/skills/mcp-builder/scripts/connections.py",
+          "[SCRIPT_LINT-LOW] evaluation.py contains magic numbers in /workspace/skills/mcp-builder/scripts/evaluation.py",
+          "[SCRIPT_LINT-LOW] evaluation.py missing shebang line in /workspace/skills/mcp-builder/scripts/evaluation.py"
+        ],
+        "messages": []
+      },
+      "gating": {
+        "tier": 1,
+        "blocking": true
+      },
+      "publication_target": {
+        "skill_name": "mcp-builder",
+        "skill_digest": "sha256:88476ba76e36d5d994cf294539d268fdfb33768b8aed6200514d7587a3fa8063",
+        "skill_digest_algorithm": "skill-evaluator-source-tree/2"
+      },
+      "publication_evidence": {
+        "schema_version": 1,
+        "producer": "skillevaluator.tier1",
+        "tier": 1,
+        "check_id": "lint"
+      },
+      "workflow": {
+        "tier": 1,
+        "stages": {
+          "validation": {
+            "status": "incomplete"
+          },
+          "llm": {
+            "status": "skipped",
+            "reason": "LLM checks disabled by --no-llm."
+          }
+        }
+      }
+    }
+  ],
+  "benchmark_policy": {
+    "tier2_required": true,
+    "tier3_required": true
+  },
+  "publication_status": "incomplete",
+  "publication": {
+    "status": "incomplete",
+    "eligible": false,
+    "reasons": [
+      "One or more validators reported incomplete scanner evidence."
+    ],
+    "tier3": {
+      "status": "not_run",
+      "evidence_complete": false,
+      "execution_status": "not_run",
+      "verdict": "not_run",
+      "reason": "Tier 3 lacks publication-complete execution evidence."
+    }
+  },
+  "policy": {
+    "profile": "external",
+    "audience": "external",
+    "digest": "sha256:1caeb0bf9c2e044705f32fcdbd773fea4d835d895b4e0ab20d1aaa5e28acd660",
+    "author_email_regex": null,
+    "severity_overrides": {
+      "SCHEMA.author_missing": "high",
+      "SCHEMA.author_format": "high",
+      "WORKFLOWS.author_format": "high",
+      "LICENSE.*": "critical"
+    },
+    "source": "/opt/skillevaluator/.venv/lib/python3.12/site-packages/skillevaluator/config/profiles/external.yaml"
+  },
+  "quality_config": {
+    "source": "packaged",
+    "file": null,
+    "digest": "sha256:b70a47b94b92e0e3a82f704930dad392b753df162aa30463ce0567d24ee76e49",
+    "min_score": 70
+  },
+  "evaluated_source": null,
+  "gating": {
+    "tiers": {
+      "1": {
+        "blocking": true,
+        "validators": [
+          "Schema & Repository Governance",
+          "Semantic Version Validation",
+          "Security Scan",
+          "PII Scan",
+          "License Compliance",
+          "Code Risk Analysis",
+          "Secrets Detection",
+          "Code Integrity & Hygiene",
+          "Dependency Vulnerability Audit",
+          "Unicode Smuggling Detection",
+          "QUALITY",
+          "SCRIPT_LINT"
+        ]
+      }
+    }
+  },
+  "workflow": {
+    "tier": 1,
+    "stages": {
+      "validation": {
+        "status": "incomplete"
+      },
+      "llm": {
+        "status": "skipped",
+        "reason": "LLM checks disabled by --no-llm."
+      }
+    }
+  },
+  "quality_summary": [
+    {
+      "overall_score": 81.5,
+      "grade": "B",
+      "skill_type": "script-based",
+      "skill_name": "mcp-builder",
+      "dimensions": {
+        "correctness": {
+          "score": 65.0,
+          "weight": 0.35,
+          "issues_count": 5,
+          "issues": [
+            {
+              "severity": "warning",
+              "message": "No documented scripts in table format",
+              "suggestion": "Add '## Available Scripts' with table: | Script | Purpose | Arguments |",
+              "deduction": 10
+            },
+            {
+              "severity": "warning",
+              "message": "Instructions don't mention 'run_script'",
+              "suggestion": "Add explicit run_script() call examples",
+              "deduction": 10
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'version'",
+              "suggestion": "Add 'version' to frontmatter \u2014 Semantic version (e.g., \"1.0.0\")",
+              "deduction": 5
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'metadata.author'",
+              "suggestion": "Add 'author' under metadata: \u2014 Author name or team (under metadata:)",
+              "deduction": 5
+            },
+            {
+              "severity": "warning",
+              "message": "SKILL_SPEC recommended field missing: 'metadata.tags'",
+              "suggestion": "Add 'tags' under metadata: \u2014 Categorization tags (under metadata:, list of 1-5 items)",
+              "deduction": 5
+            }
+          ]
+        },
+        "discoverability": {
+          "score": 90.0,
+          "weight": 0.25,
+          "issues_count": 2,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "Description very long (277 chars, recommend 50-150)",
+              "suggestion": "Keep descriptions concise for progressive disclosure",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No '## Purpose' section",
+              "suggestion": "Add purpose section to clarify use cases",
+              "deduction": 5
+            }
+          ]
+        },
+        "reliability": {
+          "score": 85.0,
+          "weight": 0.25,
+          "issues_count": 3,
+          "issues": [
+            {
+              "severity": "info",
+              "message": "No prerequisites/requirements documented",
+              "suggestion": "Document dependencies, API keys, or setup needed",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No limitations documented",
+              "suggestion": "Add '## Limitations' section with known issues/constraints",
+              "deduction": 5
+            },
+            {
+              "severity": "info",
+              "message": "No troubleshooting section documented",
+              "suggestion": "Add '## Troubleshooting' with Error/Cause/Solution patterns",
+              "deduction": 5
+            }
+          ]
+        },
+        "efficiency": {
+          "score": 100.0,
+          "weight": 0.15,
+          "issues_count": 0,
+          "issues": []
+        }
+      },
+      "metrics": {
+        "total_tokens": 2773,
+        "recommended_max_tokens": 5000,
+        "frontmatter_tokens": 86,
+        "instructions_tokens": 2684,
+        "script_count": 2,
+        "has_examples": true,
+        "has_error_handling": true,
+        "has_frontmatter": true,
+        "has_instructions": false,
+        "has_scripts": true,
+        "has_lib_module": false
+      }
+    }
+  ],
+  "generated_at": "2026-11-03T01:24:24.214788+00:00"
+}
